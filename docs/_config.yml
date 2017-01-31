@@ -1,0 +1,7 @@
+name: Intro to Computer Vision
+baseurl: /ARTTECH-3039
+url: https://saic-ats.github.io/ARTTECH-3039
+description: ARTTECH 3039
+timezone: America/Chicago
+gems:
+    - jekyll-sitemap
