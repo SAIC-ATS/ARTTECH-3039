@@ -5,3 +5,4 @@ description: ARTTECH 3039
 timezone: America/Chicago
 gems:
     - jekyll-sitemap
+    - jekyll-seo-tag
