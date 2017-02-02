@@ -110,7 +110,7 @@ Students wait-listed for classes will be admitted on a space available basis det
 ## Course Schedule
 _(subject to change based on incoming skills and experience)_
 
-### Week 0
+### Week 0 <small>31 Jan, 2017</small>
 - Course Overview
   - Classic Computer Vision
   - Machine Learning
@@ -167,7 +167,7 @@ _(subject to change based on incoming skills and experience)_
   - http://ofxaddons.com/categories/10-computer-vision
   - [Workshop](https://github.com/kylemcdonald/ofxCv/wiki/Intermediate-Computer-Vision-with-openFrameworks)
 
-### Week 1
+### Week 1 <small>31 Jan, 2017</small>
 - Classical Computer Vision Part 0
   - Image Filtering
     - Brightness, Contrast, etc.
@@ -177,14 +177,14 @@ _(subject to change based on incoming skills and experience)_
   - Contours
   - Object Tracking
 
-### Week 2
+### Week 2 <small>07 Feb, 2017</small>
 - Classical Computer Vision Part 1
   - Homography and Rectification
   - Video Mapping / Quad Mapping
   - Detection
   - Recognition
 
-### Week 3
+### Week 3 <small>14 Feb, 2017</small>
 - Contemporary Sensing with RGB+D
   - Kinect
   - 3D Segmentation
@@ -192,7 +192,7 @@ _(subject to change based on incoming skills and experience)_
 - LIDAR
 - Point Clouds
 
-### Week 4
+### Week 4 <small>21 Feb, 2017</small>
 - Machine Learning 0
   - [Introduction](https://www.youtube.com/watch?v=40riCqvRoMs&list=PLzjJ7xfFxm6nTKTfB1xwE70efksbY6jbC)
   - Resources
@@ -204,7 +204,7 @@ _(subject to change based on incoming skills and experience)_
     - MNIST
   - [t-SNE](https://lvdmaaten.github.io/tsne/), [ofxTSNE](https://github.com/genekogan/ofxTSNE)
 
-### Week 5
+### Week 5 <small>28 Feb, 2017</small>
 - Machine Learning 1
   - Object Recognition Darknet / Yolo
     - https://github.com/mrzl/ofxDarknet
@@ -214,32 +214,40 @@ _(subject to change based on incoming skills and experience)_
     - https://github.com/TensorBox/TensorBox
   - [Multi-Person Pose Estimation](https://www.youtube.com/watch?v=pW6nZXeWlGM) and [this](https://github.com/ZheC/Realtime_Multi-Person_Pose_Estimation)
 
-### Week 6
+### Critique Week <small>07 Mar, 2017</small>
+- No class.
+
+### Week 6 <small>14 Mar, 2017</small>
 - Machine Learning 2
   - Image Generation with [Pix2Pix](https://github.com/phillipi/pix2pix), ([example](https://github.com/brangerbriz/docker-StackGAN))
 
-### Week 7
+### Week 7 <small>21 Mar, 2017</small>
 - Machine Learning 3
   - Adversarial Networks [GANs](https://github.com/brangerbriz/docker-StackGAN)
 
-### Week 8
+### Week 8 <small>28 Mar, 2017</small>
 - Machine Learning 3
-  - Viewers Choice
+  - TBA
 
-### Week 9
+### Week 9 <small>04 April, 2017</small>
+  - [Automation Show Field Trip](http://www.automateshow.com/)
+    - We will be on the lookout for computer vision and machine learning technologies.
   - Open Studio
 
-### Week 10
+### Week 10 <small>11 April, 2017</small>
   - Open Studio
 
-### Week 11
+### Week 11 <small>18 April, 2017</small>
   - Open Studio
 
-### Week 13
+### Week 13 <small>25 April, 2017</small>
   - Open Studio
 
-### Week 14
+### Week 14 <small>02 May, 2017</small>
   - Final Critiques
+
+### Week 15 <small>09 May, 2017</small>
+  - Documentation Critiques
 
 ## Prerequisites
 
