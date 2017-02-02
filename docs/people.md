@@ -1,6 +1,8 @@
 ---
 layout: page
-title:  People
+title: People
+order: 300
+published: false
 ---
 
 <ul>

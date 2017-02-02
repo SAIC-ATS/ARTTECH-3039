@@ -1,6 +1,7 @@
 ---
 layout: page
-title:  Assignments
+title: Assignments
+order: 200
 ---
 
 <ul class="list-unstyled">

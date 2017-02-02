@@ -1,9 +1,12 @@
 ---
 layout: page
-title:  Syllabus
+title: Syllabus
+order: 100
 ---
 
-# Introduction to Computer Vision and Machine Learning, ARTTECH 3039
+# Intro to Computer Vision and Machine Learning
+
+## ARTTECH 3039
 
 Semester, Year
 :   Spring, 2017
@@ -47,8 +50,6 @@ N/A
 Computer vision allows machines to see and understand their environment. This course will equip students with the practical skills and critical theory needed to both employ and critically engage these techniques. Real-time body tracking, facial recognition and gesture analysis using RGB+D and LiDAR sensors, artificial intelligence and machine learning will be emphasized. Students will explore and critique contemporary applications ranging from automated mass surveillance to interactive installations. A final project will build on in-class workshops, technical exercises, critical readings and discussions.
 
 ## Course Goals
-__Key goals include:__
-
 - Working and applied knowledge "classical" computer vision techniques.
 - Working and applied knowledge of modern computer vision techniques that leverage machine learning.
 
@@ -65,13 +66,13 @@ Students will engage in individual in-lab and home assignments, class presentati
 ## Assignments
 The course may include workshops and several projects, relevant technical and theoretical reading, written online responses, technical research and outings.
 
-## Class Text
+## Class Text(s)
 There is no official class text, though there are several books that we'll reference on occasion.
 
 ### openFrameworks
 - [ofBook](https://github.com/openframeworks/ofBook)
 
-### Classical Computer Vision
+### Computer Vision
 - [Practical OpenCV](https://link.springer.com/book/10.1007%2F978-1-4302-6080-6)
 - [Learning OpenCV : computer vision with the OpenCV library](https://vufind.carli.illinois.edu/vf-sai/Record/sai_123825)
 - [Computer Vision: Algorithms and Applications](http://szeliski.org/Book/)
@@ -106,7 +107,6 @@ Students wait-listed for classes will be admitted on a space available basis det
 [Disability and Learning Resource Center](http://www.saic.edu/lifeatsaic/wellnesscenter/disabilityandlearningresourcecenter/)
 
 ## Course Schedule
-
 _(subject to change based on incoming skills and experience)_
 
 ### Week 0
@@ -207,6 +207,7 @@ _(subject to change based on incoming skills and experience)_
 - Machine Learning 1
   - Object Recognition Darknet / Yolo
     - https://github.com/mrzl/ofxDarknet
+    - http://stoj.io/projects/an-algorithm-watching-a-movie-trailer/
     - https://github.com/genekogan/screengrab-caption
     - http://pjreddie.com/darknet/yolo/
     - https://github.com/TensorBox/TensorBox
@@ -236,7 +237,7 @@ _(subject to change based on incoming skills and experience)_
 ### Week 13
   - Open Studio
 
-#### Week 14
+### Week 14
   - Final Critiques
 
 ## Prerequisites
