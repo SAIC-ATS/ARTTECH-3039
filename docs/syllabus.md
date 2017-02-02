@@ -5,9 +5,7 @@ permalink: /syllabus/
 order: 100
 ---
 
-# Intro to Computer Vision and Machine Learning
-
-## ARTTECH 3039
+## Intro to Computer Vision and Machine Learning <small>ARTTECH 3039</small>
 
 Semester, Year
 :   Spring, 2017
@@ -47,7 +45,6 @@ N/A
 --------------------------------------------------------------------------------
 
 ## Course Description
-
 Computer vision allows machines to see and understand their environment. This course will equip students with the practical skills and critical theory needed to both employ and critically engage these techniques. Real-time body tracking, facial recognition and gesture analysis using RGB+D and LiDAR sensors, artificial intelligence and machine learning will be emphasized. Students will explore and critique contemporary applications ranging from automated mass surveillance to interactive installations. A final project will build on in-class workshops, technical exercises, critical readings and discussions.
 
 ## Course Goals
