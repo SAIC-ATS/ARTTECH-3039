@@ -1,6 +1,7 @@
 ---
 layout: page
 title: People
+permalink: /people/
 order: 300
 published: false
 ---
