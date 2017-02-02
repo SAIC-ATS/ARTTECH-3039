@@ -194,11 +194,6 @@ _(subject to change based on incoming skills and experience)_
 
 ### Week 4 <small>21 Feb, 2017</small>
 - Machine Learning 0
-  - [Introduction](https://www.youtube.com/watch?v=40riCqvRoMs&list=PLzjJ7xfFxm6nTKTfB1xwE70efksbY6jbC)
-  - Resources
-    - https://arxiv.org/, http://www.arxiv-sanity.com/
-    - http://www.gitxiv.com/
-  - [Implementations](http://www.gitxiv.com/)
   - Introduction to Machine Learning
   - Basic Training
     - MNIST
