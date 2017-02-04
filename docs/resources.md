@@ -29,7 +29,10 @@ This is a list of resources that is _not even close_ to comprehensive. If you fe
     - [@pkmital](https://twitter.com/pkmital)
     - [@drfeifei](https://twitter.com/drfeifei)
     - [@hmason](https://twitter.com/hmason)
-
+    - [@karpathy](https://twitter.com/karpathy)
+    - [@thinkmariya](https://twitter.com/thinkmariya)
+    - [@zeynep](https://twitter.com/zeynep)
+    - [@genekogan](https://twitter.com/genekogan)
   - Medium
     - [https://medium.com/@samim](https://medium.com/@samim)
 
@@ -38,3 +41,9 @@ This is a list of resources that is _not even close_ to comprehensive. If you fe
 
 ## Is there existing software that I can use without much programming?
 - [Wekinator](http://www.wekinator.org/)
+
+## Are there newsletters and podcasts?
+- Newsletters
+  - http://subscribe.machinelearnings.co/
+- Podcasts
+  - [NVidia AI Podcast](https://blogs.nvidia.com/blog/2016/11/30/the-ai-podcast/)
