@@ -6,3 +6,8 @@ timezone: America/Chicago
 gems:
     - jekyll-sitemap
     - jekyll-seo-tag
+    - jekyll-feed
+    - jekyll-gist
+    - jekyll-mentions
+    - jekyll-readme-index
+    - jekyll-sitemap

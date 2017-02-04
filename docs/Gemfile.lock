@@ -196,6 +196,7 @@ PLATFORMS
 
 DEPENDENCIES
   github-pages
+  jekyll-swiss
 
 BUNDLED WITH
    1.13.7
