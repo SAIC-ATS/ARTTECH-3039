@@ -47,3 +47,15 @@ This is a list of resources that is _not even close_ to comprehensive. If you fe
   - http://subscribe.machinelearnings.co/
 - Podcasts
   - [NVidia AI Podcast](https://blogs.nvidia.com/blog/2016/11/30/the-ai-podcast/)
+
+## Other resources, tutorials, etc.
+- [ofBook - Image Processing and Computer Vision](http://openframeworks.cc/ofBook/chapters/image_processing_computer_vision.html)
+- [Introduction to Computer Vision - Coding Train](https://www.youtube.com/playlist?list=PLRqwX-V7Uu6aG2RJHErXKSWFDXU4qo_ro)
+- [Computer Vision for Artists and Designers: Pedagogic Tools and Techniques for Novice Programmers](http://www.flong.com/texts/essays/essay_cvad/)
+- [ofxAddons - Computer Vision](http://ofxaddons.com/categories/10-computer-vision)
+- [Computer Vision Workshop Notes - Kyle Mcdonald](https://github.com/kylemcdonald/ofxCv/wiki/Intermediate-Computer-Vision-with-openFrameworks)
+
+
+## What about other advanced C++ features?
+  - [Move Semantics](https://www.lynda.com/C-tutorials/C-Move-Semantics/379654-2.html)
+

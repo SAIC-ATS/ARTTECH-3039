@@ -111,20 +111,32 @@ _(subject to change based on incoming skills and experience)_
 - Course Overview
   - Classic Computer Vision
   - Machine Learning
+    - "What is artificial intelligence?"
+    - "What is machine learning?"
 - Review
   - git / github
+    - Set up command line.
+    - Fork, clone, add, commit, push, pull-request.
   - openFrameworks
     - Installation
+      - Development version (clone `master` vs. download nightly)
+    - Directory layout.
     - Project Generator
-    - Addons
-      - [ofxPS3EyeGrabber](https://github.com/bakercp/ofxPS3EyeGrabber/)
-        - A driver for the cheap and versatile [PS3 Eye Camera](https://en.wikipedia.org/wiki/PlayStation_Eye).
-      - ofxOpenCv _(Included with openFrameworks as a core addon)_
-        - Contains the [OpenCV](http://opencv.org/) library.
-        - Contains some older classes to simplify interacting with OpenCV in openFrameworks.
-      - [ofxCv](https://github.com/bakercp/ofxCv) (_develop branch of @bakercp's fork is up-to-date with latest openFrameworks_)
-        - Contains a lot of OpenCV examples along with a modern collection of wrappers.
-    - Compiling
+      - How to generates project files.
+    - Install initial addons
+      - Many addons found at [http://ofxaddons.com/](http://ofxaddons.com/).
+        - Tips for finding "fresh" addons.
+      - Addons we'll use
+        - [ofxPS3EyeGrabber](https://github.com/bakercp/ofxPS3EyeGrabber/)
+          - A driver for the cheap and versatile [PS3 Eye Camera](https://en.wikipedia.org/wiki/PlayStation_Eye).
+        - ofxOpenCv _(Included with openFrameworks as a core addon)_
+          - Contains the [OpenCV](http://opencv.org/) library.
+          - Contains some older classes to simplify interacting with OpenCV in openFrameworks.
+        - [ofxCv](https://github.com/bakercp/ofxCv) (_develop branch of @bakercp's fork is up-to-date with latest openFrameworks_)
+          - Contains a lot of OpenCV examples along with a modern collection of wrappers.
+    - Compiling an openFrameworks application
+      - Compiling with Xcode.
+      - Compiling on the command line with the `Makefile`.
     - Program Structure
   - Code Basics
     - Variables - data, memory, etc.
@@ -135,44 +147,72 @@ _(subject to change based on incoming skills and experience)_
     - Single 1-dimensional array
     - Accessing individual elements
       - Nested for-loop for x and y
- - Simple Infinite Impulse Response [Low Pass Filters](https://en.wikipedia.org/wiki/Low-pass_filter#Simple_infinite_impulse_response_filter)
-  > Low-pass filters provide a smoother form of a signal, removing the short-term fluctuations, and leaving the longer-term trend.
-
 - Intro to Computer Vision
-- Motion Detection
-  - Frame Differencing
-    - In class Example
-  - Optical Flow
-    - https://en.wikipedia.org/wiki/Optical_flow
-- Background Subtraction
-  - Fixed Background Subtraction
-  - Adaptive Background Subtraction
-- Brightness Thresholding
-  - Fixed Threshold
-  - Adaptive Threshold
 - Pixel Tracking
   - Brightness Tracking
   - Color Tracking
+- Example
+  - Laser Pointer Tracker
 
 - Color Tracking
   - [Color Distance](https://en.wikipedia.org/wiki/Color_difference)
 
-- Resources
-  - [Intro](http://openframeworks.cc/ofBook/chapters/image_processing_computer_vision.html)
-  - [Introduction to Computer Vision](https://www.youtube.com/playlist?list=PLRqwX-V7Uu6aG2RJHErXKSWFDXU4qo_ro)
-  - [Computer Vision for Artists and Designers: Pedagogic Tools and Techniques for Novice Programmers](http://www.flong.com/texts/essays/essay_cvad/)
-  - http://ofxaddons.com/categories/10-computer-vision
-  - [Workshop](https://github.com/kylemcdonald/ofxCv/wiki/Intermediate-Computer-Vision-with-openFrameworks)
-
 ### Week 1 <small>31 Jan, 2017</small>
 - Classical Computer Vision Part 0
+  - Binary Images
+    - Why binary images?
+      - Background vs. Foreground
+    - Background Subtraction
+      - Importance of "helpful" auto-camera parameters
+        - Auto gain, auto white balance, auto shutter speed, etc.
+        - Should be fixed for many background subtraction situations.
+      - Fixed Background Subtraction
+        - `examples/computer_vision/opencvExample`
+      - Adaptive Background Subtraction
+        - `ofxCv/example-background`
+    - Brightness Thresholding
+      - Fixed Threshold
+        - `ofxCv/example-threshold`
+      - Adaptive Threshold
+        - `ofxCv/example-threshold` (press mouse)
   - Image Filtering
     - Brightness, Contrast, etc.
     - Morphological Operators, Lines and Edges
       - Hough, Canny, Scharr, Sobel, Structured Forest, [etc](http://docs.opencv.org/3.1.0/d0/da5/tutorial_ximgproc_prediction.html)
+
+  - ofPolyline Review
+  - Simple Infinite Impulse Response [Low Pass Filters](https://en.wikipedia.org/wiki/Low-pass_filter#Simple_infinite_impulse_response_filter)
+   > Low-pass filters provide a smoother form of a signal, removing the short-term fluctuations, and leaving the longer-term trend.
+
+- After Lunch
   - Image Segmentation
   - Contours
   - Object Tracking
+  - Motion Detection
+    - Frame Differencing
+      - In class Example
+    - Optical Flow
+      - https://en.wikipedia.org/wiki/Optical_flow
+
+https://www.youtube.com/watch?v=a67f8P9f3EU
+https://vimeo.com/106798521
+https://www.youtube.com/watch?v=XNHv6VryB8o
+https://vimeo.com/8525186
+http://www.yesyesno.com/night-lights/
+https://www.youtube.com/watch?v=0177x_ajmuU
+https://www.youtube.com/watch?v=dqZyZrN3Pl0
+https://youtu.be/dmmxVA5xhuo
+https://vimeo.com/15136354
+https://www.youtube.com/watch?v=d4DUIeXSEpk
+https://www.youtube.com/watch?v=VdrujesfIBQ
+http://www.tmema.org/messa/messa.html
+  - http://www.tmema.org/messa/technical.html
+  - http://www.tmema.org/messa/diagrams/
+    - http://www.tmema.org/messa/diagrams/old/concert_2_screen/messa_optical_configurations.pdf
+    - http://www.tmema.org/messa/diagrams/more_messa_diagram_2005.pdf
+- https://www.youtube.com/watch?v=I5__9hq-yas
+- https://www.youtube.com/watch?v=rHTttiliLz8
+- https://www.youtube.com/watch?v=MPG-LYoW27E
 
 ### Week 2 <small>07 Feb, 2017</small>
 - Classical Computer Vision Part 1
