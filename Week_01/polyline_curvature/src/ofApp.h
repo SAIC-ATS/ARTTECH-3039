@@ -16,8 +16,10 @@ public:
     void mouseDragged(int x, int y, int button);
     void mousePressed(int x, int y, int button);
 
+    void addPoint(float x, float y);
+
     std::vector<Circle> circles;
-    std::vector<glm::vec2> points;
+    ofPolyline polyline;
 
     bool isRecording = false;;
     
