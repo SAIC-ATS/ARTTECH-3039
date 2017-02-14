@@ -11,7 +11,7 @@ void ofApp::setup()
     //perp *= 10.0f;
     //perp += points[0];
     //cout << points[0] << " pnt: " << perp << "<<" << endl;
-    }
+}
 
 
 void ofApp::update()
