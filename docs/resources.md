@@ -44,7 +44,7 @@ This is a list of resources that is _not even close_ to comprehensive. If you fe
 
 ## Are there newsletters and podcasts?
 - Newsletters
-  - http://subscribe.machinelearnings.co/
+  - [Machine Learnings](http://subscribe.machinelearnings.co/)
 - Podcasts
   - [NVidia AI Podcast](https://blogs.nvidia.com/blog/2016/11/30/the-ai-podcast/)
 
