@@ -181,8 +181,6 @@ _(subject to change based on incoming skills and experience)_
       - Hough, Canny, Scharr, Sobel, Structured Forest, [etc](http://docs.opencv.org/3.1.0/d0/da5/tutorial_ximgproc_prediction.html)
 
   - ofPolyline Review
-  - Simple Infinite Impulse Response [Low Pass Filters](https://en.wikipedia.org/wiki/Low-pass_filter#Simple_infinite_impulse_response_filter)
-   > Low-pass filters provide a smoother form of a signal, removing the short-term fluctuations, and leaving the longer-term trend.
 
 - After Lunch
   - Image Segmentation
@@ -194,34 +192,64 @@ _(subject to change based on incoming skills and experience)_
     - Optical Flow
       - https://en.wikipedia.org/wiki/Optical_flow
 
-https://www.youtube.com/watch?v=a67f8P9f3EU
-https://vimeo.com/106798521
-https://www.youtube.com/watch?v=XNHv6VryB8o
-https://vimeo.com/8525186
-http://www.yesyesno.com/night-lights/
-https://www.youtube.com/watch?v=0177x_ajmuU
-https://www.youtube.com/watch?v=dqZyZrN3Pl0
-https://youtu.be/dmmxVA5xhuo
-https://vimeo.com/15136354
-https://www.youtube.com/watch?v=d4DUIeXSEpk
-https://www.youtube.com/watch?v=VdrujesfIBQ
-http://www.tmema.org/messa/messa.html
-  - http://www.tmema.org/messa/technical.html
-  - http://www.tmema.org/messa/diagrams/
-    - http://www.tmema.org/messa/diagrams/old/concert_2_screen/messa_optical_configurations.pdf
-    - http://www.tmema.org/messa/diagrams/more_messa_diagram_2005.pdf
-- https://www.youtube.com/watch?v=I5__9hq-yas
-- https://www.youtube.com/watch?v=rHTttiliLz8
-- https://www.youtube.com/watch?v=MPG-LYoW27E
-
 ### Week 2 <small>07 Feb, 2017</small>
-- Classical Computer Vision Part 1
+- Review
+  - Debugging / Troubleshooting
+    - Examples (https://www.csee.umbc.edu/courses/undergraduate/202/fall04/Projects/CommonErrors.shtml)
+    - Compile time vs. Runtime Errors.
+    - Compile time error examples.
+      - Preprocessor Errors
+        - Missing `#include` (e.g. missing header files)
+        - `#pragma once` or "header guard" or "include guards" misplaced
+      - Compiler errors
+        - Incorrect syntax
+          - Invalid number of arguments in function
+          - Incompatible types
+        - Redefined type
+        - Unknown type
+        - Unknown function
+        - IDE / Configuration Error
+          - Where is your file?
+      - Linker errors
+        - Unimplemented method -> missing symbols
+        - Missing symbols
+        - Duplicated symbols
+          - Multiple `main` functions
+        - Incompatible libraries (i.e. compiled for the wrong architecture)
+    - Runtime error examples.
+      - Invalid access (trying to access data that isn't there, e.g. past the end of an array)
+      - Recursive loop ...
+      - Divide by zero .
+      - Memory leak.
+      - Accessing memory index outside of an array ...
+      - Input / Output
+        - File not found.
+        - Website offline.
+        - Kinect sending bad data ...
+- Classical Computer Vision Part 2
+  - Acquiring contours
+  - Resampling contours
+  - Analyzing contours
+    - Calculating curvature.
+      - via change in tangents
+      - via circle fitting
+    - Cross product
+    - Convex Hull
+    - Convex Hull defects
+    - Drawing on a curve
+
+### Week 3 <small>14 Feb, 2017</small>
+- Classical Computer Vision Part 2
+  - Introduction to Box2D / Physics Engines
+  - Simple Infinite Impulse Response [Low Pass Filters](https://en.wikipedia.org/wiki/Low-pass_filter#Simple_infinite_impulse_response_filter)
+   > Low-pass filters provide a smoother form of a signal, removing the short-term fluctuations, and leaving the longer-term trend.
+
   - Homography and Rectification
   - Video Mapping / Quad Mapping
   - Detection
   - Recognition
 
-### Week 3 <small>14 Feb, 2017</small>
+### Week 4 <small>21 Feb, 2017</small>
 - Contemporary Sensing with RGB+D
   - Kinect
   - 3D Segmentation
@@ -229,14 +257,17 @@ http://www.tmema.org/messa/messa.html
 - LIDAR
 - Point Clouds
 
-### Week 4 <small>21 Feb, 2017</small>
+### Week 5 <small>28 Feb, 2017</small>
 - Machine Learning 0
   - Introduction to Machine Learning
   - Basic Training
     - MNIST
   - [t-SNE](https://lvdmaaten.github.io/tsne/), [ofxTSNE](https://github.com/genekogan/ofxTSNE)
 
-### Week 5 <small>28 Feb, 2017</small>
+### Critique Week <small>07 Mar, 2017</small>
+- No class.
+
+### Week 6 <small>14 Mar, 2017</small>
 - Machine Learning 1
   - Object Recognition Darknet / Yolo
     - https://github.com/mrzl/ofxDarknet
@@ -246,20 +277,13 @@ http://www.tmema.org/messa/messa.html
     - https://github.com/TensorBox/TensorBox
   - [Multi-Person Pose Estimation](https://www.youtube.com/watch?v=pW6nZXeWlGM) and [this](https://github.com/ZheC/Realtime_Multi-Person_Pose_Estimation)
 
-### Critique Week <small>07 Mar, 2017</small>
-- No class.
-
-### Week 6 <small>14 Mar, 2017</small>
+### Week 7 <small>21 Mar, 2017</small>
 - Machine Learning 2
   - Image Generation with [Pix2Pix](https://github.com/phillipi/pix2pix), ([example](https://github.com/brangerbriz/docker-StackGAN))
 
-### Week 7 <small>21 Mar, 2017</small>
-- Machine Learning 3
-  - Adversarial Networks [GANs](https://github.com/brangerbriz/docker-StackGAN)
-
 ### Week 8 <small>28 Mar, 2017</small>
 - Machine Learning 3
-  - TBA
+  - Adversarial Networks [GANs](https://github.com/brangerbriz/docker-StackGAN)
 
 ### Week 9 <small>04 April, 2017</small>
   - [Automation Show Field Trip](http://www.automateshow.com/)
