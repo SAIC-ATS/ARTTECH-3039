@@ -3,6 +3,8 @@
 
 void ofApp::setup()
 {
+    // The `hands.mp4` video used in these examples can be downloaded
+    // [here](http://christopherbaker.net/dropbox/hands.mp4).
     video.load("hands.mp4");
     video.play();
 
