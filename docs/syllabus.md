@@ -157,7 +157,7 @@ _(subject to change based on incoming skills and experience)_
 - Color Tracking
   - [Color Distance](https://en.wikipedia.org/wiki/Color_difference)
 
-### Week 1 <small>31 Jan, 2017</small>
+### Week 1 <small>07 Feb, 2017</small>
 - Classical Computer Vision Part 0
   - Binary Images
     - Why binary images?
@@ -192,7 +192,8 @@ _(subject to change based on incoming skills and experience)_
     - Optical Flow
       - https://en.wikipedia.org/wiki/Optical_flow
 
-### Week 2 <small>07 Feb, 2017</small>
+
+### Week 2 <small>14 Feb, 2017</small>
 - Review
   - Debugging / Troubleshooting
     - Examples (https://www.csee.umbc.edu/courses/undergraduate/202/fall04/Projects/CommonErrors.shtml)
@@ -238,18 +239,34 @@ _(subject to change based on incoming skills and experience)_
     - Convex Hull defects
     - Drawing on a curve
 
-### Week 3 <small>14 Feb, 2017</small>
+### Week 3 <small>21 Feb, 2017</small>
 - Classical Computer Vision Part 2
+  - Review Projects
+  - Introduction to Morphological Operators
+  - Review Pointers / References
+    - Why Pointers and References?
+      - Particle System Example
+    - Raw Pointers
+      - `int* pMyValue;`
+    - Smart Pointers
+      - `std::shared_ptr`, `std::make_shared`
+      - `std::unique_ptr`, `std::make_unique`
+  - Review Geometry
+    - `atan` vs `atan2`.
   - Introduction to Box2D / Physics Engines
-  - Simple Infinite Impulse Response [Low Pass Filters](https://en.wikipedia.org/wiki/Low-pass_filter#Simple_infinite_impulse_response_filter)
-   > Low-pass filters provide a smoother form of a signal, removing the short-term fluctuations, and leaving the longer-term trend.
+    - What is it?
+    - Why not just use a particle system?
+  - Build Manual Input Session Cover
 
-  - Homography and Rectification
-  - Video Mapping / Quad Mapping
-  - Detection
-  - Recognition
+### Week 4 <small>28 Feb, 2017</small>
+- Simple Infinite Impulse Response [Low Pass Filters](https://en.wikipedia.org/wiki/Low-pass_filter#Simple_infinite_impulse_response_filter)
+ > Low-pass filters provide a smoother form of a signal, removing the short-term fluctuations, and leaving the longer-term trend.
 
-### Week 4 <small>21 Feb, 2017</small>
+- Homography and Rectification
+- Video Mapping / Quad Mapping
+- Detection
+- Recognition
+
 - Contemporary Sensing with RGB+D
   - Kinect
   - 3D Segmentation
@@ -257,7 +274,6 @@ _(subject to change based on incoming skills and experience)_
 - LIDAR
 - Point Clouds
 
-### Week 5 <small>28 Feb, 2017</small>
 - Machine Learning 0
   - Introduction to Machine Learning
   - Basic Training
@@ -267,7 +283,7 @@ _(subject to change based on incoming skills and experience)_
 ### Critique Week <small>07 Mar, 2017</small>
 - No class.
 
-### Week 6 <small>14 Mar, 2017</small>
+### Week 5 <small>14 Mar, 2017</small>
 - Machine Learning 1
   - Object Recognition Darknet / Yolo
     - https://github.com/mrzl/ofxDarknet
@@ -277,32 +293,32 @@ _(subject to change based on incoming skills and experience)_
     - https://github.com/TensorBox/TensorBox
   - [Multi-Person Pose Estimation](https://www.youtube.com/watch?v=pW6nZXeWlGM) and [this](https://github.com/ZheC/Realtime_Multi-Person_Pose_Estimation)
 
-### Week 7 <small>21 Mar, 2017</small>
+### Week 6 <small>21 Mar, 2017</small>
 - Machine Learning 2
   - Image Generation with [Pix2Pix](https://github.com/phillipi/pix2pix), ([example](https://github.com/brangerbriz/docker-StackGAN))
 
-### Week 8 <small>28 Mar, 2017</small>
+### Week 7 <small>28 Mar, 2017</small>
 - Machine Learning 3
   - Adversarial Networks [GANs](https://github.com/brangerbriz/docker-StackGAN)
 
-### Week 9 <small>04 April, 2017</small>
+### Week 8 <small>04 April, 2017</small>
   - [Automation Show Field Trip](http://www.automateshow.com/)
     - We will be on the lookout for computer vision and machine learning technologies.
   - Open Studio
 
-### Week 10 <small>11 April, 2017</small>
+### Week 9 <small>11 April, 2017</small>
   - Open Studio
 
-### Week 11 <small>18 April, 2017</small>
+### Week 10 <small>18 April, 2017</small>
   - Open Studio
 
-### Week 13 <small>25 April, 2017</small>
+### Week 11 <small>25 April, 2017</small>
   - Open Studio
 
-### Week 14 <small>02 May, 2017</small>
+### Week 12 <small>02 May, 2017</small>
   - Final Critiques
 
-### Week 15 <small>09 May, 2017</small>
+### Week 13 <small>09 May, 2017</small>
   - Documentation Critiques
 
 ## Prerequisites
