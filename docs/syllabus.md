@@ -259,6 +259,63 @@ _(subject to change based on incoming skills and experience)_
   - Build Manual Input Session Cover
 
 ### Week 4 <small>28 Feb, 2017</small>
+- Memory
+  - Stack vs. Heap
+    - Stack: used for static memory allocation
+      - fast, is automatically freed when the items go out of scope.
+      - kept locally as values
+    - Heap: used for dynamic memory allocation
+      - pretty fast, items are not automatically freed when they go out of scope.
+      - returns pointers to memory
+    - Watch out for ...
+      - Working with pointers to things in the stack ... "dangling pointers"
+        - e.g. ... returning a pointer or a reference to a local value in a function.
+        - e.g. ... using a pointer to a member inside of a class that is deleted.
+
+  - Dynamic Memory Allocation
+    - `new` must be paired with `delete`
+    - `new` for an array, must be paired with `delete[]`
+    - Tip: Be suspicious of the `new` keyword and make sure it has its paired `delete` ...
+  - Smart Pointers
+    - `std::unique_ptr<class T>` a unique pointer that can't be copied, only moved (via `std::move`).
+      - To create, use `std::make_unique<class T>(... The constructor args for class T ...)`
+    - `std::shared_ptr<class T>` a shared pointer that allows dynamic allocation of resources and calls `delete` internally when there are no more references.
+      - To create use `std::make_shared<class T>(... The constructor args for class T ...)`
+    - Using `std::make_shared` and `std::make_unique` simplifies the operation and removes any lingering suspicions aroused by the with the `new` keyword ...
+  - Read Only memory
+    - `const`
+    - `const &`
+  - Value vs. Pointer vs. Reference
+- C++ Collections and Containers [ref](http://en.cppreference.com/w/cpp/container)
+  - Iterators
+    - `iterator` vs. `const_iterator` vs. `reverse_iterator` vs. `const_reverse_iterator`
+    - `std::begin()`, `std::end()`
+    - Members
+      - `begin()`, `end()`, `rbegin()`, `rend()`, `cbegin()`, `rcbegin()`, `rcend()`.
+  - Types
+    - Sequence Containers []
+      - `std::array<class T, std::size_t N>` [ref](http://en.cppreference.com/w/cpp/container/array)
+      - `std::vector<class T>` [ref](http://en.cppreference.com/w/cpp/container/vector)
+    - Associative Containers
+      - `std::set<class T>` [ref](http://en.cppreference.com/w/cpp/container/set)
+      - `std::map<class Key, Class T>` [ref](http://en.cppreference.com/w/cpp/container/map)
+
+      ```
+      auto it = m.cbegin();
+      while (it != m.cend())
+      {
+        if (must_delete)
+        {
+          it = m.erase(it);
+        }
+        else
+        {
+          ++it;
+        }
+      }
+      ```
+---
+
 - Simple Infinite Impulse Response [Low Pass Filters](https://en.wikipedia.org/wiki/Low-pass_filter#Simple_infinite_impulse_response_filter)
  > Low-pass filters provide a smoother form of a signal, removing the short-term fluctuations, and leaving the longer-term trend.
 
