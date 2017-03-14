@@ -316,31 +316,32 @@ _(subject to change based on incoming skills and experience)_
       ```
 ---
 
-- Simple Infinite Impulse Response [Low Pass Filters](https://en.wikipedia.org/wiki/Low-pass_filter#Simple_infinite_impulse_response_filter)
- > Low-pass filters provide a smoother form of a signal, removing the short-term fluctuations, and leaving the longer-term trend.
+### Critique Week <small>07 Mar, 2017</small>
+- No class.
 
-- Homography and Rectification
-- Video Mapping / Quad Mapping
-- Detection
-- Recognition
-
-- Contemporary Sensing with RGB+D
-  - Kinect
-  - 3D Segmentation
-  - Skeleton Tracking
-- LIDAR
-- Point Clouds
+### Week 5 <small>14 Mar, 2017</small>
+- openFrameworks C / C++
+  - Histograms w/ `std::map`
+  - `ofThread` vs. `std::thread`
+  - `ofThreadChannel`
+  - `ofEvents`
+  - "Data Serialization"
+    - `ofJson`
+      - Loading JSON
+      - Saving JSON
+    - `ofXml`
+      - Loading XML
+      - Saving XML
 
 - Machine Learning 0
   - Introduction to Machine Learning
   - Basic Training
     - MNIST
+  - ofxCcv, ofxAssignment
   - [t-SNE](https://lvdmaaten.github.io/tsne/), [ofxTSNE](https://github.com/genekogan/ofxTSNE)
+  - [ofxLearn](https://github.com/genekogan/ofxLearn)
 
-### Critique Week <small>07 Mar, 2017</small>
-- No class.
-
-### Week 5 <small>14 Mar, 2017</small>
+### Week 6 <small>21 Mar, 2017</small>
 - Machine Learning 1
   - Object Recognition Darknet / Yolo
     - https://github.com/mrzl/ofxDarknet
@@ -350,7 +351,21 @@ _(subject to change based on incoming skills and experience)_
     - https://github.com/TensorBox/TensorBox
   - [Multi-Person Pose Estimation](https://www.youtube.com/watch?v=pW6nZXeWlGM) and [this](https://github.com/ZheC/Realtime_Multi-Person_Pose_Estimation)
 
-### Week 6 <small>21 Mar, 2017</small>
+  - Simple Infinite Impulse Response [Low Pass Filters](https://en.wikipedia.org/wiki/Low-pass_filter#Simple_infinite_impulse_response_filter)
+   > Low-pass filters provide a smoother form of a signal, removing the short-term fluctuations, and leaving the longer-term trend.
+
+  - Homography and Rectification
+  - Video Mapping / Quad Mapping
+  - Detection
+  - Recognition
+
+  - Contemporary Sensing with RGB+D
+    - Kinect
+    - 3D Segmentation
+    - Skeleton Tracking
+  - LIDAR
+  - Point Clouds
+
 - Machine Learning 2
   - Image Generation with [Pix2Pix](https://github.com/phillipi/pix2pix), ([example](https://github.com/brangerbriz/docker-StackGAN))
 

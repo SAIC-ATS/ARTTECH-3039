@@ -3,7 +3,7 @@
 
 void ofApp::setup()
 {
-    for (int i = 0; i < 10; ++i)
+    for (int i = 0; i < 4; ++i)
     {
         myClasses.push_back(std::make_shared<MyClass>());
         myClasses.back()->startThread();

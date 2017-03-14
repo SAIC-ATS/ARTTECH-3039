@@ -9,7 +9,7 @@ class MyClass: public ofThread
 public:
     float getDifficultInt() const;
 
-    void threadedFunction();
+    void threadedFunction() override;
 
     ofThreadChannel<float> channel;
 
