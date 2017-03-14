@@ -3,6 +3,7 @@
 
 void ofApp::setup()
 {
+    
     // A map of our data.
     std::vector<SurnameDatum> data;
 
@@ -44,46 +45,83 @@ void ofApp::setup()
 
     }
 
-    // 1. From the vector, create a map between `name` and `count`.
+    // 1. From the vector, create a map between `name` and `count` (with rank less than 100).
+
     std::map<std::string, int> surnameCountMap;
 
     for (auto datum: data)
     {
-        // ...
+        if (datum.rank < 100)
+            surnameCountMap[datum.surname] = datum.count;
     }
 
     // 1.1. Remove any names whose second letter is `E`.
+    auto it = surnameCountMap.begin();
+    while (it != surnameCountMap.end())
+    {
+        std::string surname = it->first;
 
-    // ...
+        if (surname[1] == 'E')
+        {
+            it = surnameCountMap.erase(it);
+        }
+        else
+        {
+            ++it;
+        }
+    }
 
     // 1.2. Calculate the total count for that subgroup and print that number.
 
     int count = 0;
-
     for (auto entry: surnameCountMap)
     {
-        // ...
+        count += entry.second;
     }
 
     std::cout << "Count: " << count << std::endl;
 
-    // 1.3. Did you get 4688487?
+    // 1.3. Did you get 41268464?
 
     // 2. Make a "histogram" counts by first letter of the surname.
     // i.e. How many names start with A? How many names start with B? etc?
     std::map<char, int> firstLetterCountMap;
 
-    // ...
+    for (char letter = 'A'; letter <= 'Z'; ++letter)
+    {
+        firstLetterCountMap[letter] = 0;
+    }
 
     // 2.1. What is the most popular first letter?
 
-    // ...
+    for (auto datum: data)
+    {
+        firstLetterCountMap[datum.surname[0]] += 1;
+    }
+
+    auto maxValues = std::make_pair('A', std::numeric_limits<int>::lowest());
+
+    for (auto entry: firstLetterCountMap)
+    {
+        if (entry.second >= maxValues.second)
+        {
+            maxValues = entry;
+        }
+    }
+
+    std::cout << maxValues.first << " : " << maxValues.second << std::endl;
 
     // Did you get "M"?
 
     // 2.2 What letters(s) have a count of zero?
 
-    // ...
+    for (auto entry: firstLetterCountMap)
+    {
+        if (entry.second == 0)
+        {
+            std::cout << entry.first << std::endl;
+        }
+    }
 
     // 3. std::vectors can be sorted in many ways, including via a custom
     // "lambda" function.
@@ -107,7 +145,13 @@ void ofApp::setup()
 
     // Did you get ZHANG, YANG and HUYNH?
 
-    // ...
+    std::sort(data.begin(), data.end(), [](SurnameDatum a, SurnameDatum b) {
+        return a.percentWhite < b.percentWhite;
+    });
+
+    for (auto i = 0; i < 3; ++i)
+        std::cout << data[i].percentWhite << " " << data[i].surname << std::endl;
+
 
     // We are done here.
     ofExit();
