@@ -2,7 +2,7 @@
 
 - Move to the place where you want to install `cd SOMEWHERE`
 - `git clone -b batch_to_json https://github.com/bakercp/darknet.git`
-- `cd darknet`
+- `cd darknet` **ALL SUBSEQUENT COMMANDS SHOULD BE RUN FROM THIS FOLDER**
 - `make -j8 -s` Make the darknet executable.
 - `./detector.sh` To download the net weights initial (you will get an ambigious error.)
 - To run a single directory ...
