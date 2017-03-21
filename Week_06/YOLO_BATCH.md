@@ -12,9 +12,12 @@
 - Make a plain text file called `folders.txt` in your `darknet` directory using your favorite text editor (`atom`, `vi`, `nano`, `sublime`, `text wrangler`).
 - An example `folders.txt` file _might_ look like this (make sure there is a trailing slash /.
 
+**THERE MUST BE AN EMPTY LINE AT THE END OF THE** `folders.txt`
+
 ```
 /PATH/TO/MY/FOLDER/FULL/OF/IMAGES/
 /PATH/TO/MY/FOLDER/FULL/OF/OTHER/IMAGES/
+
 ```
 
 - To process all images in all listed folders run
