@@ -1,0 +1,38 @@
+[
+    {
+        "data_file": "/Volumes/SuperFastHD/openFrameworks/ARTTECH-3039/Week_07/00_BatchFeatureEncoder/bin/data/images/th_artwork_58a0afa179990.jpg.image-net-2012.sqlite3.7.dat",
+        "image_file": "/Volumes/SuperFastHD/openFrameworks/ARTTECH-3039/Week_07/00_BatchFeatureEncoder/bin/data/images/th_artwork_58a0afa179990.jpg",
+        "x": 0.172466620585971,
+        "y": 1.0
+    },
+    {
+        "data_file": "/Volumes/SuperFastHD/openFrameworks/ARTTECH-3039/Week_07/00_BatchFeatureEncoder/bin/data/images/th_artwork_58a0b1ded7071.jpg.image-net-2012.sqlite3.7.dat",
+        "image_file": "/Volumes/SuperFastHD/openFrameworks/ARTTECH-3039/Week_07/00_BatchFeatureEncoder/bin/data/images/th_artwork_58a0b1ded7071.jpg",
+        "x": 0.552178660958419,
+        "y": 0.0
+    },
+    {
+        "data_file": "/Volumes/SuperFastHD/openFrameworks/ARTTECH-3039/Week_07/00_BatchFeatureEncoder/bin/data/images/th_artwork_58a0b16c50635.jpg.image-net-2012.sqlite3.7.dat",
+        "image_file": "/Volumes/SuperFastHD/openFrameworks/ARTTECH-3039/Week_07/00_BatchFeatureEncoder/bin/data/images/th_artwork_58a0b16c50635.jpg",
+        "x": 1.0,
+        "y": 0.653247842907023
+    },
+    {
+        "data_file": "/Volumes/SuperFastHD/openFrameworks/ARTTECH-3039/Week_07/00_BatchFeatureEncoder/bin/data/images/th_artwork_58a0b2310c126.jpg.image-net-2012.sqlite3.7.dat",
+        "image_file": "/Volumes/SuperFastHD/openFrameworks/ARTTECH-3039/Week_07/00_BatchFeatureEncoder/bin/data/images/th_artwork_58a0b2310c126.jpg",
+        "x": 0.478131264206571,
+        "y": 0.630240803854571
+    },
+    {
+        "data_file": "/Volumes/SuperFastHD/openFrameworks/ARTTECH-3039/Week_07/00_BatchFeatureEncoder/bin/data/images/th_artwork_58a0b21272e1b.jpg.image-net-2012.sqlite3.7.dat",
+        "image_file": "/Volumes/SuperFastHD/openFrameworks/ARTTECH-3039/Week_07/00_BatchFeatureEncoder/bin/data/images/th_artwork_58a0b21272e1b.jpg",
+        "x": 0.583593832297394,
+        "y": 0.971172214031212
+    },
+    {
+        "data_file": "/Volumes/SuperFastHD/openFrameworks/ARTTECH-3039/Week_07/00_BatchFeatureEncoder/bin/data/images/th_artwork_58a0b202434c3.jpg.image-net-2012.sqlite3.7.dat",
+        "image_file": "/Volumes/SuperFastHD/openFrameworks/ARTTECH-3039/Week_07/00_BatchFeatureEncoder/bin/data/images/th_artwork_58a0b202434c3.jpg",
+        "x": 0.0,
+        "y": 0.168124014755809
+    }
+]

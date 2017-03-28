@@ -1,0 +1,12 @@
+{
+  "images": "../../../00_BatchFeatureEncoder/bin/data/images",
+  "network": "image-net-2012.sqlite3",
+  "layer": 7,
+  "tsne":
+  {
+    "dims": 2,
+    "perplexity": 50,
+    "theta": 0.500000,
+    "normalize": true
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "embedded_image_list": "../../../01_EmbedFeatures2D/bin/data/image_embeddings.json",
+  "assignment": {
+    "nx": 3,
+    "ny": 2,
+    "w": 256,
+    "h": 256,
+    "display_w": 100,
+    "display_h": 100
+  },
+  "image_save_path": "grid.png"
+}
