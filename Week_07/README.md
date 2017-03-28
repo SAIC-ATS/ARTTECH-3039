@@ -1,5 +1,7 @@
 # Faster TSNE embedding, etc.
 
+0.  First, place a copy of `image-net-2012.sqlite3` and `image-net-2012.words`in the `00_BatchFeatureEncoder/bid/data` folder.
+
 1. First use `00_BatchFeatureEncoder` to encode all of your images. This will create a whole bunch of data files that correspond to the features from the given network layer that is specified in the `settings.json`.  You can load them from the `settings.json` file or you should be able to drag and drop files.  The gui should show you how many jobs your workers have remaining.  Data that has already been processed will be skipped if the data file is found, so stopping and starting won't lose your data.
 
 2. Next calculate the reduced dimensionality embeddings using TSNE.  See `01_EmbedFeatures2D`.  This is not fast or parallel.  It is slow.  Sorry.  This will produce a file called "`image_embeddings.json`". That file will feed the next program ...
