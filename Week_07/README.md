@@ -16,3 +16,5 @@ You might play around with using different layers, different "perplexities", etc
 
 Also note that all of the data has already been calculated for this example.  Thus it may not seem like it did anything.  Please check the output messages on the console.
 
+To use it on your data, either point the `00_BatchFeatureEncoder` settings file to your data, and adjust all three other settings files, OR place all of your images in the `00_BatchFeatureEncoder/bid/data/images` folder and run all three programs in sequence.
+
