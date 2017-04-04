@@ -55,7 +55,7 @@ void ofApp::draw()
         float w = det["rect"]["w"];
         float h = det["rect"]["h"];
 
-        std::string displayString = label + ofToString(prob);
+        std::string displayString = label + " " + ofToString(prob);
 
         ofRectangle rect(x, y, w, h);
 
