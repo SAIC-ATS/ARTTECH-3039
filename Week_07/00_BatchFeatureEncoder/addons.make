@@ -1,3 +1,0 @@
-ofxCcv
-ofxIO
-ofxPoco

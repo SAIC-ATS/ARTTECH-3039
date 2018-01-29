@@ -1,9 +1,0 @@
-{
-    "network": "image-net-2012.sqlite3",
-    "use_cuda": false,
-    "layers_to_encode": [7],
-    "force_encode": true,
-    "num_workers": 8,
-    "filename_filter": ".*jp[e]?g|.*.png",
-    "initial_directory_to_process": "images/"
-}
