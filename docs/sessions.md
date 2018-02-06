@@ -1,12 +1,31 @@
 ---
 layout: page
-title: Home
-permalink: /
-order: 100
-navigation: false
+title: Sessions
+permalink: /sessions
+navigation: true
 ---
 
-{% for session in site.sessions %}
+<!-- {% for collection in site.collections %}
+
+
+<ul>
+{% if collection.name and collection.docs.size != 0 %}
+{% for doc in collection.docs %}
+<a class="dropdown-item" href="{{ site.baseurl }}{{ doc.url }}">{{ doc.title }}</a>
+{% endfor %}
+
+    <li><a href="{{ site.baseurl }}{{ doc.url }}">{{ collection.name }} - {{ doc.title }}</a></li>
+{% endif %}
+</ul>
+{% endfor %} -->
+
+
+
+
+
+
+
+{% for session in site.data.course.sessions %}
 <hr>
 <div class="container">
   <h2>{{ session.name }}

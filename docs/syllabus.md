@@ -2,81 +2,85 @@
 layout: page
 title: Syllabus
 permalink: /syllabus/
-order: 100
+order: 0
 ---
 
 ## Intro to Computer Vision and Machine Learning <small>ARTTECH 3039</small>
-
 Semester, Year
-:   Spring, 2017
+:   {{ site.data.course.semester }}, {{ site.data.course.year }}
 
-Meeting Times
-:   Tuesday 9am-4pm
+Meetings
+:   {% for meeting in site.data.course.meetings %}{% assign section = forloop.index | prepend: '000' | slice: -3, 3 %}(-{{ section }}) {{ meeting }}{% if site.data.course.meetings.size > 0 %}{% unless forloop.last %},{% endunless %} {% endif %}{% endfor %}
 
 Meeting Location
-:   MacLean 400
+:   {% for location in site.data.course.locations %}{% assign section = forloop.index | prepend: '000' | slice: -3, 3 %}(-{{ section }}) {{ location }}{% if site.data.course.locations.size > 0 %}{% unless forloop.last %},{% endunless %} {% endif %}{% endfor %}
 
-Instructor
-:   [Christopher Baker](https://christopherbaker.net)
+People
+:   {% for person in site.data.course.people %}{{person.role}}: [{{ person.name }}]({{ person.url }}){% if site.data.course.people.size > 0 %}{% unless forloop.last %},{% endunless %} {% endif %}{% endfor %}
 
-Class Forum
-:   [https://ats.community/c/courses/arttech-3039](https://ats.community/c/courses/arttech-3039)
-
-Class Website
-:   [http://saic-ats.github.io/ARTTECH-3039/](http://saic-ats.github.io/ARTTECH-3039/)
-
-Public Repository (code examples, etc)
-:   [https://github.com/SAIC-ATS/ARTTECH-3039/](https://github.com/SAIC-ATS/ARTTECH-3039/)
-
-Private Repository (assignment submission, etc)
-:   [https://github.com/SAIC-ATS/ARTTECH-3039-Spring-2017-Private](https://github.com/SAIC-ATS/ARTTECH-3039-Spring-2017-Private)
-
-TA
-:   N/A
+{% for site in site.data.course.sites %}
+{{ site.name }}
+:   [{{ site.url }}]({{ site.url }}) {% if site.comment %}_{{ site.comment }}_{% endif %}
+{% endfor %}
 
 --------------------------------------------------------------------------------
 
-### Instructor Bio
-[Christopher Baker](http://christopherbaker.net) is an artist whose work engages the rich collection of social, technological and ideological networks present in the urban landscape. He creates artifacts and situations that reveal and generate relationships within and between these networks. Christopher’s work has been presented worldwide and he contributes to the open source community at [http://github.com/bakercp](http://github.com/bakercp).
+## Bios
 
-## TA Bio
-N/A
+{% for person in site.data.course.people %}
+{{ person.bio }}
+{% endfor %}
 
 --------------------------------------------------------------------------------
 
 ## Course Description
-Computer vision allows machines to see and understand their environment. This course will equip students with the practical skills and critical theory needed to both employ and critically engage these techniques. Real-time body tracking, facial recognition and gesture analysis using RGB+D and LiDAR sensors, artificial intelligence and machine learning will be emphasized. Students will explore and critique contemporary applications ranging from automated mass surveillance to interactive installations. A final project will build on in-class workshops, technical exercises, critical readings and discussions.
+{{ site.data.course.description }}
 
 ## Course Goals
-- Working and applied knowledge "classical" computer vision techniques.
-- Working and applied knowledge of modern computer vision techniques that leverage machine learning.
+-   Working and applied knowledge "classical" computer vision techniques.
+-   Working and applied knowledge of modern computer vision techniques that leverage machine learning.
 
 ## Course Values
-- Sharing / Open
-    - Documentation
-    - [DIWO](http://furtherfield.org/projects/diwo-do-it-others-resource)
-    - Publish
-    - [Cult of Done](http://www.brepettis.com/blog/2009/3/3/the-cult-of-done-manifesto.html)
+-   Sharing / Open
+    -   Documentation
+    -   [DIWO](http://furtherfield.org/projects/diwo-do-it-others-resource)
+    -   Publish
+    -   [Cult of Done](http://www.brepettis.com/blog/2009/3/3/the-cult-of-done-manifesto.html)
 
 ## Methodology
 Students will engage in individual in-lab and home assignments, class presentations, lectures, discussions, assigned readings, group and individual projects and desk critiques. Visiting artists / faculty may enhance the experience and offer additional perspectives.
 
+## Class Structure (Typical)
+-   9:00 -  9:30 : Look at new artists, catch up on the week's CV/ML headlines.
+-   9:30 - 10:15 : Lecture Part 1.
+-   10:15 - 10:30 : Break
+-   10:30 - 12:00 : Lecture Part 2.
+-   12:00 - 01:00 : Lunch
+-   01:00 - 02:30 : Hands-on Workshop.
+-   02:30 - 02:45 : Break
+-   02:45 - 04:00 : Open Studio (Homework, Projects, Discussion, etc).
+
 ## Assignments
-The course may include workshops and several projects, relevant technical and theoretical reading, written online responses, technical research and outings.
+The first 66% of the course will be built on well-constrained code-based assignments. These assignments have clear goals and are intended to build confidence and code competency. The last 34% of the course is focused on integrating these techniques, technologies and critical discussions with your existing creative / research practice. The final project will be part of an exhibition.
+
+## Creative Coding Tools
+We will be doing most of our work in C++ with openFrameworks. Most modern computer vision and machine learning tools are built with C++ at their core. That said, many online examples use Python to interact with the same code. We will primarily focus on well-documented libraries that well-documented and easily compatible with openFrameworks (e.g. [OpenCV](https://opencv.org/) and [dlib](http://dlib.net/)).
 
 ## Class Text(s)
-There is no official class text, though there are several books that we'll reference on occasion.
+There is no single class text, though there are several online books (and available for purchase) that we'll reference on occasion.
 
-### openFrameworks
-- [ofBook](https://github.com/openframeworks/ofBook)
+-   openFrameworks
+    -   Collaboratively Written. [ofBook](https://github.com/openframeworks/ofBook)
 
-### Computer Vision
-- [Practical OpenCV](https://link.springer.com/book/10.1007%2F978-1-4302-6080-6)
-- [Learning OpenCV : computer vision with the OpenCV library](https://vufind.carli.illinois.edu/vf-sai/Record/sai_123825)
-- [Computer Vision: Algorithms and Applications](http://szeliski.org/Book/)
+-   Computer Vision
+    -   Szeliski, Richard. [Computer Vision: Algorithms and Applications](http://szeliski.org/Book/)
+    -   Brahmbhatt, Samarth. [Practical OpenCV](https://link.springer.com/book/10.1007%2F978-1-4302-6080-6)
+    -   Bradski, G. & Kaehler, A. [Learning OpenCV : computer vision with the OpenCV library](http://www-cs.ccny.cuny.edu/~wolberg/capstone/opencv/LearningOpenCV.pdf)
 
-### Machine Learning
-- [ML4A](https://ml4a.github.io/index/) _In progress book_
+-   Machine Learning
+    -   Kogan, G.[ML4A](https://ml4a.github.io/index/)
+    -   Goodfellow et al. [Deep Learning](http://www.deeplearningbook.org/)
+    -   Nielsen, M. [Neural Networks and Deep Learning](http://neuralnetworksanddeeplearning.com/)
 
 ## Reading and other Resources
 Posted on the course website.
@@ -85,9 +89,9 @@ Posted on the course website.
 Provided by the student as needed.
 
 ## Attendance
-1. Students are best served by attending all classes.
-2. Missing three classes will result in a class failure. This is strictly enforced.
-3. Six or more unexcused late arrivals or early departures will result in class failure.
+1.  Students are best served by attending all classes.
+2.  Missing three classes will result in a class failure. This is strictly enforced.
+3.  Six or more unexcused late arrivals or early departures will result in class failure.
 
 _Tip: If you are going to be absent, late to class, or need to depart early, please contact me BEFORE class starts. This is so I can make sure you have what you need to succeed!_
 
@@ -95,8 +99,8 @@ _Tip: If you are going to be absent, late to class, or need to depart early, ple
 Students wait-listed for classes will be admitted on a space available basis determined by instructors’ discretion (in consultation with the department chair).
 
 ## Grading Procedure/Criteria
-- Grades are credit / no-credit for this course. Credit is based on several factors: 30% participation (discussions, critiques, etc), 70% projects / assignments.
-- Incomplete grades will not be offered.
+-   Grades are credit / no-credit for this course. Credit is based on several factors: 30% participation (discussions, critiques, etc), 70% projects / assignments.
+-   Incomplete grades will not be offered.
 
 ## Writing Assistance
 [Writing Center](http://www.saic.edu/webspaces/portal/advising/write\_center.html)
@@ -104,426 +108,21 @@ Students wait-listed for classes will be admitted on a space available basis det
 ## Special Needs
 [Disability and Learning Resource Center](http://www.saic.edu/lifeatsaic/wellnesscenter/disabilityandlearningresourcecenter/)
 
+## Study Sessions
+-   Students are encouraged to form a study group to meet and work on the homework.
+-   The TA will be available during TA office hours (TBA).
+
+## Class Exhibition
+-   The course will culminate in a class exhibition with an opening during the second-to-last week of class.
+
 ## Course Schedule
 _(subject to change based on incoming skills and experience)_
 
-### Week 0 <small>31 Jan, 2017</small>
-- Course Overview
-  - Classic Computer Vision
-  - Machine Learning
-    - "What is artificial intelligence?"
-    - "What is machine learning?"
-- Review
-  - git / github
-    - Set up command line.
-    - Fork, clone, add, commit, push, pull-request.
-  - openFrameworks
-    - Installation
-      - Development version (clone `master` vs. download nightly)
-    - Directory layout.
-    - Project Generator
-      - How to generates project files.
-    - Install initial addons
-      - Many addons found at [http://ofxaddons.com/](http://ofxaddons.com/).
-        - Tips for finding "fresh" addons.
-      - Addons we'll use
-        - [ofxPS3EyeGrabber](https://github.com/bakercp/ofxPS3EyeGrabber/)
-          - A driver for the cheap and versatile [PS3 Eye Camera](https://en.wikipedia.org/wiki/PlayStation_Eye).
-        - ofxOpenCv _(Included with openFrameworks as a core addon)_
-          - Contains the [OpenCV](http://opencv.org/) library.
-          - Contains some older classes to simplify interacting with OpenCV in openFrameworks.
-        - [ofxCv](https://github.com/bakercp/ofxCv) (_develop branch of @bakercp's fork is up-to-date with latest openFrameworks_)
-          - Contains a lot of OpenCV examples along with a modern collection of wrappers.
-    - Compiling an openFrameworks application
-      - Compiling with Xcode.
-      - Compiling on the command line with the `Makefile`.
-    - Program Structure
-  - Code Basics
-    - Variables - data, memory, etc.
-    - Arrays - collections of variables.
-    - `for` loops, including ``
-    - `if` / `else`
-  - Image Representation
-    - Single 1-dimensional array
-    - Accessing individual elements
-      - Nested for-loop for x and y
-- Intro to Computer Vision
-- Pixel Tracking
-  - Brightness Tracking
-  - Color Tracking
-- Example
-  - Laser Pointer Tracker
+{% assign sessions = site.sessions | sort: 'name' %}
+{% for session in sessions %}
+{% assign session_data = site.data.course.sessions | where:"name",session.name | first %}
 
-- Color Tracking
-  - [Color Distance](https://en.wikipedia.org/wiki/Color_difference)
+### {{ session.name }} <small>{% for date in session_data.dates %}{% assign section = forloop.index | prepend: '000' | slice: -3, 3 %}({{ section }}: {{ date | date_to_string }}){% endfor %}</small>
+-   {{ session.title }}
 
-### Week 1 <small>07 Feb, 2017</small>
-- Classical Computer Vision Part 0
-  - Binary Images
-    - Why binary images?
-      - Background vs. Foreground
-    - Background Subtraction
-      - Importance of "helpful" auto-camera parameters
-        - Auto gain, auto white balance, auto shutter speed, etc.
-        - Should be fixed for many background subtraction situations.
-      - Fixed Background Subtraction
-        - `examples/computer_vision/opencvExample`
-      - Adaptive Background Subtraction
-        - `ofxCv/example-background`
-    - Brightness Thresholding
-      - Fixed Threshold
-        - `ofxCv/example-threshold`
-      - Adaptive Threshold
-        - `ofxCv/example-threshold` (press mouse)
-  - Image Filtering
-    - Brightness, Contrast, etc.
-    - Morphological Operators, Lines and Edges
-      - Hough, Canny, Scharr, Sobel, Structured Forest, [etc](http://docs.opencv.org/3.1.0/d0/da5/tutorial_ximgproc_prediction.html)
-
-  - ofPolyline Review
-
-- After Lunch
-  - Image Segmentation
-  - Contours
-  - Object Tracking
-  - Motion Detection
-    - Frame Differencing
-      - In class Example
-    - Optical Flow
-      - https://en.wikipedia.org/wiki/Optical_flow
-
-
-### Week 2 <small>14 Feb, 2017</small>
-- Review
-  - Debugging / Troubleshooting
-    - Examples (https://www.csee.umbc.edu/courses/undergraduate/202/fall04/Projects/CommonErrors.shtml)
-    - Compile time vs. Runtime Errors.
-    - Compile time error examples.
-      - Preprocessor Errors
-        - Missing `#include` (e.g. missing header files)
-        - `#pragma once` or "header guard" or "include guards" misplaced
-      - Compiler errors
-        - Incorrect syntax
-          - Invalid number of arguments in function
-          - Incompatible types
-        - Redefined type
-        - Unknown type
-        - Unknown function
-        - IDE / Configuration Error
-          - Where is your file?
-      - Linker errors
-        - Unimplemented method -> missing symbols
-        - Missing symbols
-        - Duplicated symbols
-          - Multiple `main` functions
-        - Incompatible libraries (i.e. compiled for the wrong architecture)
-    - Runtime error examples.
-      - Invalid access (trying to access data that isn't there, e.g. past the end of an array)
-      - Recursive loop ...
-      - Divide by zero .
-      - Memory leak.
-      - Accessing memory index outside of an array ...
-      - Input / Output
-        - File not found.
-        - Website offline.
-        - Kinect sending bad data ...
-- Classical Computer Vision Part 2
-  - Acquiring contours
-  - Resampling contours
-  - Analyzing contours
-    - Calculating curvature.
-      - via change in tangents
-      - via circle fitting
-    - Cross product
-    - Convex Hull
-    - Convex Hull defects
-    - Drawing on a curve
-
-### Week 3 <small>21 Feb, 2017</small>
-- Classical Computer Vision Part 2
-  - Review Projects
-  - Introduction to Morphological Operators
-  - Review Pointers / References
-    - Why Pointers and References?
-      - Particle System Example
-    - Raw Pointers
-      - `int* pMyValue;`
-    - Smart Pointers
-      - `std::shared_ptr`, `std::make_shared`
-      - `std::unique_ptr`, `std::make_unique`
-  - Review Geometry
-    - `atan` vs `atan2`.
-  - Introduction to Box2D / Physics Engines
-    - What is it?
-    - Why not just use a particle system?
-  - Build Manual Input Session Cover
-
-### Week 4 <small>28 Feb, 2017</small>
-- Memory
-  - Stack vs. Heap
-    - Stack: used for static memory allocation
-      - fast, is automatically freed when the items go out of scope.
-      - kept locally as values
-    - Heap: used for dynamic memory allocation
-      - pretty fast, items are not automatically freed when they go out of scope.
-      - returns pointers to memory
-    - Watch out for ...
-      - Working with pointers to things in the stack ... "dangling pointers"
-        - e.g. ... returning a pointer or a reference to a local value in a function.
-        - e.g. ... using a pointer to a member inside of a class that is deleted.
-
-  - Dynamic Memory Allocation
-    - `new` must be paired with `delete`
-    - `new` for an array, must be paired with `delete[]`
-    - Tip: Be suspicious of the `new` keyword and make sure it has its paired `delete` ...
-  - Smart Pointers
-    - `std::unique_ptr<class T>` a unique pointer that can't be copied, only moved (via `std::move`).
-      - To create, use `std::make_unique<class T>(... The constructor args for class T ...)`
-    - `std::shared_ptr<class T>` a shared pointer that allows dynamic allocation of resources and calls `delete` internally when there are no more references.
-      - To create use `std::make_shared<class T>(... The constructor args for class T ...)`
-    - Using `std::make_shared` and `std::make_unique` simplifies the operation and removes any lingering suspicions aroused by the with the `new` keyword ...
-  - Read Only memory
-    - `const`
-    - `const &`
-  - Value vs. Pointer vs. Reference
-- C++ Collections and Containers [ref](http://en.cppreference.com/w/cpp/container)
-  - Iterators
-    - `iterator` vs. `const_iterator` vs. `reverse_iterator` vs. `const_reverse_iterator`
-    - `std::begin()`, `std::end()`
-    - Members
-      - `begin()`, `end()`, `rbegin()`, `rend()`, `cbegin()`, `rcbegin()`, `rcend()`.
-  - Types
-    - Sequence Containers []
-      - `std::array<class T, std::size_t N>` [ref](http://en.cppreference.com/w/cpp/container/array)
-      - `std::vector<class T>` [ref](http://en.cppreference.com/w/cpp/container/vector)
-    - Associative Containers
-      - `std::set<class T>` [ref](http://en.cppreference.com/w/cpp/container/set)
-      - `std::map<class Key, Class T>` [ref](http://en.cppreference.com/w/cpp/container/map)
-
-      ```
-      auto it = m.cbegin();
-      while (it != m.cend())
-      {
-        if (must_delete)
-        {
-          it = m.erase(it);
-        }
-        else
-        {
-          ++it;
-        }
-      }
-      ```
----
-
-### Critique Week <small>07 Mar, 2017</small>
-- No class.
-
-### Week 5 <small>14 Mar, 2017</small>
-- openFrameworks C / C++
-  - Histograms w/ `std::map`
-  - `ofThread` vs. `std::thread`
-  - `ofThreadChannel`
-  - `ofEvents`
-  - "Data Serialization"
-    - `ofJson`
-      - Loading JSON
-      - Saving JSON
-    - `ofXml`
-      - Loading XML
-      - Saving XML
-
-- Machine Learning 0
-  - Introduction to Machine Learning
-  - Basic Training
-    - MNIST
-  - ofxCcv, ofxAssignment
-  - [t-SNE](https://lvdmaaten.github.io/tsne/), [ofxTSNE](https://github.com/genekogan/ofxTSNE)
-  - [ofxLearn](https://github.com/genekogan/ofxLearn)
-
-### Week 6 <small>21 Mar, 2017</small>
-- Machine Learning 1
-  - Object Recognition Darknet / Yolo
-    - https://github.com/mrzl/ofxDarknet
-    - http://stoj.io/projects/an-algorithm-watching-a-movie-trailer/
-    - https://github.com/genekogan/screengrab-caption
-    - http://pjreddie.com/darknet/yolo/
-    - https://github.com/TensorBox/TensorBox
-  - [Multi-Person Pose Estimation](https://www.youtube.com/watch?v=pW6nZXeWlGM) and [this](https://github.com/ZheC/Realtime_Multi-Person_Pose_Estimation)
-
-  - Simple Infinite Impulse Response [Low Pass Filters](https://en.wikipedia.org/wiki/Low-pass_filter#Simple_infinite_impulse_response_filter)
-   > Low-pass filters provide a smoother form of a signal, removing the short-term fluctuations, and leaving the longer-term trend.
-
-  - Homography and Rectification
-  - Video Mapping / Quad Mapping
-  - Detection
-  - Recognition
-
-  - Contemporary Sensing with RGB+D
-    - Kinect
-    - 3D Segmentation
-    - Skeleton Tracking
-  - LIDAR
-  - Point Clouds
-
-- Machine Learning 2
-  - Image Generation with [Pix2Pix](https://github.com/phillipi/pix2pix), ([example](https://github.com/brangerbriz/docker-StackGAN))
-
-### Week 7 <small>28 Mar, 2017</small>
-- Machine Learning 3
-  - Adversarial Networks [GANs](https://github.com/brangerbriz/docker-StackGAN)
-
-### Week 8 <small>04 April, 2017</small>
-  - [Automation Show Field Trip](http://www.automateshow.com/)
-    - We will be on the lookout for computer vision and machine learning technologies.
-  - Open Studio
-
-### Week 9 <small>11 April, 2017</small>
-  - Open Studio
-
-### Week 10 <small>18 April, 2017</small>
-  - Open Studio
-
-### Week 11 <small>25 April, 2017</small>
-  - Open Studio
-
-### Week 12 <small>02 May, 2017</small>
-  - Final Critiques
-
-### Week 13 <small>09 May, 2017</small>
-  - Documentation Critiques
-
-## Prerequisites
-
-Knowledge of basic coding tools is required for this course. This includes the following:
-
-### Familiarity with the Command Line
-- Navigate the file system using
-  - `cd` Change directory using
-    - `cd ../../../my_folder` relative paths names
-    - `cd /Users/me/Desktop` absolute path names
-  - `..` Specify the parent directory
-  - `.` Specify the current directory
-  - `pwd` Output the current working directory
-
-- Modify the file system using
-  - `mkdir new_directory` Make a new directory
-  - `rmdir old_directory` Remove an old directory
-  - `rm -rf old_directory` Recursively and forcefully remove an old directory _(be careful!)_
-  - `mv old_name.txt new_name.txt` Rename files
-  - `mv old_name.txt ../../` Move files
-
-- Connect to remote machines using `ssh`
-  - Creating and managing SSH keys.
-  - Logging on to a remote machine via SSH.
-
-- Resources:
-  - [Learn the Linux Command Line: The Basics](https://www.lynda.com/Linux-tutorials/Learn-Linux-Command-Line-Basics/435539-2.html)
-  - [Learn the Command Line](https://www.codecademy.com/learn/learn-the-command-line)
-  - [Learn Enough](https://www.learnenough.com/command-line-tutorial)
-
-### Familiarity with Git / Github
-- Track work using `git` from the command line, or a GUI.
-  - `git add your_file.txt` Stage a file to commit
-  - `git commit -m "Your commit message."` Commit all changes with a message.
-  - `git push` Push all changes to the default remote branch on github.com
-  - `git pull` Retrieve all changes from a default remote branch on github.com
-  - `git mv ...`, `git rm ...` to move and remove files and make sure git knows about it
-- Modify existing work on github by _Forking_.
-  - Forking and
-- Copy a repository from github (e.g. your fork) to your working machine using `git clone`.
-  - `git clone https://github.com/openframeworks/openFrameworks.git` to clone a repository to your working machine
-- Resolve merge conflicts when collaborating with others.
-  - Know how to resolve merge conflicts by fixing them, adding, pushing, etc.
-- Control what is automatically published using `.gitignore` files.
-  - Understand basic `.gitignore` syntax
-- Create a new repository and publish your work online.
-
-- Resources:
-  - [Github for Poets](https://www.youtube.com/playlist?list=PLRqwX-V7Uu6ZF9C0YMKuns9sLDzK6zoiV)
-  - [Up and Running with Git and GitHub](https://www.lynda.com/Git-tutorials/Up-Running-Git-GitHub/409275-2.html)
-  - [Git Essential Training](https://www.lynda.com/Git-tutorials/Git-Essential-Training/100222-2.html)
-
-### Markdown
-- Write documents using markdown syntax.
-
-- Resources:
-  - [Mastering Markdown](https://guides.github.com/features/mastering-markdown/)
-  - [Up and Running with Markdown](https://www.lynda.com/Web-Development-tutorials/Up-Running-Markdown/438888-2.html)
-  - [Markdown Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
-
-### Familiarity with Basic Code Concepts
-- What is code?
-- What is an application?
-- What is a variable?
-- What are arrays?
-- What are _control flow statements_?
-- What is an `if` / `else` statement?
-- What is a `for` loop?
-- What are the parts of a _function_?
-  - What are _return values_?
-  - What are _function parameters_?
-- What do _functions_ do?
-- What does a `main` function do?
-- What is a `class`?
-- What are the parts of a `class`?
-  - What is a member variable?
-  - What is a member function or method?  
-- What is an instance of a class?
-- What is recursion?
-
-- Resources:
-  - [Up and Running with C++](https://www.lynda.com/C-tutorials/Up-Running-C/167922-2.html)
-
-### Data Representation
-- How is binary data saved on a computer?
-- How are decimal (base 10) numbers represented in binary?
-- How is text represented with numbers?
-- How are images represented as numbers?
-- What is a "compressed" file?
-- What is the difference between lossless and lossy compression?
-- How do you pronounce _gif_?
-
-- Resources:
-  - [Counting in Binary](https://www.youtube.com/watch?v=apCLHmPsC68)
-
-### Familiarity with openFrameworks and C++
-
-#### Compiling
-- How do you generate a project files with the Project Generator?
-- How do you compile a program with an IDE like Xcode?
-
-#### Program Structure
-- What are the parts of a typical openFrameworks application?
-  - What is the `setup()` function and how is it used?
-  - What is the `update()` function and how is it used?
-  - What is the `draw()` function and how is it used?
-  - What is the `keyPressed(int key)` function and how is it used?
-- What is an _addon_ and how do you add them to your project?
-
-- Resources:
-  - [ofBook: Animation](http://openframeworks.cc/ofBook/chapters/animation.html)
-
-#### Objects
-- What is an `ofPixels` object for?
-- What is an `ofTexture` object for?
-- What is an `ofImage` object for?
-- How do you load am image from a file?
-- How do you play a movie with `ofVideoPlayer`?
-- How do you grab live video using `ofVideoGrabber`?
-- How do you modify the pixels from an `ofVideoPlayer` or `ofVideoGrabber`?
-- How do you display an image?
-
-- Resources:
-  - [openFrameworks Learning](http://openframeworks.cc/learning/)
-
-### C/C++
-- What is a _pointer_ and why might it be used?
-- What is a _reference_ and why might it be used?
-- What are _smart_ pointers and why might they be used?
-  - What is a `std::unique_ptr<>`?
-  - What is a `std::shared_ptr<>`?
-
-- Resources:
-  - [C++ Basics](http://openframeworks.cc/ofBook/chapters/cplusplus_basics.html)
-  - [C++ Essential Training](https://www.lynda.com/C-tutorials/C-Essential-Training/182674-2.html)
+{% endfor %}

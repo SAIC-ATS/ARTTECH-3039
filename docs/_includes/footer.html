@@ -1,15 +1,16 @@
 
-        <div class="navbar navbar-default">
-            <div class="container">
-                <p class="navbar-text">
-                    {{ site.name }} <small>{{ site.description }}</small>
-                </p>
-            </div>
-        </div>
+        <footer class="footer">
+          <div class="container">
+            <span class="text-muted">{{ site.data.course.name }} <small>{{ site.data.course.number }}</small></span>
+          </div>
+        </footer>
 
-        <!-- jQuery -->
-        <script src="{{ site.data.assets.js.jquery }}"></script>
-        <!-- Bootstrap -->
-        <script src="{{ site.data.assets.js.bootstrap }}"></script>
+        {% for js in site.assets.js %}
+          <!-- {{ js.name }} -->
+          <script src="{{ js.src }}" {% if js.integrity %}integrity="{{ js.integrity }}"{% endif %} {% if js.crossorigin %}crossorigin="{{ js.crossorigin}}"{% endif %}></script>
+        {% endfor %}
+
+        <!-- Custom -->
+        <script src="{{ site.baseurl }}/assets/js/main.js"></script>
     </body>
 </html>

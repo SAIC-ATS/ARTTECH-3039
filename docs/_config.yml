@@ -1,13 +1,114 @@
-name: Intro to Computer Vision
-baseurl: /ARTTECH-3039
+# title: Intro to Computer Vision
+# name: Intro to Computer Vision
+# description: The course page for ARTTECH-3039, Intro to Computer Vision.
+# forum: https://ats.community/c/courses/arttech-3039-spring-2018
+
+baseurl: /ARTTECH-3939
 url: https://saic-ats.github.io/ARTTECH-3039
-description: ARTTECH 3039
+
 timezone: America/Chicago
-gems:
-    - jekyll-sitemap
-    - jekyll-seo-tag
-    - jekyll-feed
-    - jekyll-gist
-    - jekyll-mentions
-    - jekyll-readme-index
-    - jekyll-sitemap
+
+plugins:
+  - jekyll-redirect-from
+  - jekyll-sitemap
+  - jekyll-seo-tag
+  - jekyll-feed
+
+markdown: kramdown
+highlighter: rouge
+permalink: pretty
+
+# jekyll-SEO
+# More: https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
+google_site_verification: hO8fb6wgSNVw6C5qMR4ehv-IkEJwBbBguiWxmcwcVxQ
+
+# Custom Data
+google_analytics: UA-105746846-2
+
+# Collections
+collections:
+  assignments:
+    output: true
+    name: Assignments
+  notes:
+    output: true
+    name: Notes
+  resources:
+    output: true
+    name: Resources
+  sessions:
+    output: true
+    name: Sessions
+
+  # projects:
+  #   output: true
+  #   name: Projects
+
+  # Session_00:
+  #   output: true
+  #   name: Session 00
+
+# Default Values
+defaults:
+  - scope:
+      path: ""
+    values:
+      author: bakercp
+  - scope:
+      path: ""
+      type: sessions
+    values:
+      layout: session
+  - scope:
+      path: ""
+      type: assignments
+    values:
+      layout: assignment
+
+assets:
+  css:
+    - name: FontAwesome
+      href: https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css
+      # integrity: sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN
+      crossorigin: anonymous
+
+    # - name: Bootstrap
+    #   href: https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css
+    #   integrity: sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm
+    #   crossorigin: anonymous
+
+    - name: Bootstrap Material Design
+      href: https://unpkg.com/bootstrap-material-design@4.1.1/dist/css/bootstrap-material-design.min.css
+      # integrity: sha384-R80DC0KVBO4GSTw+wZ5x2zn2pu4POSErBkf8/fSFhPXHxvHJydT0CSgAP2Yo2r4I
+      crossorigin: anonymous
+
+  js:
+    - name: jQuery
+      src: https://code.jquery.com/jquery-3.2.1.slim.min.js
+      # integrity: sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN
+      crossorigin: anonymous
+
+    # - name: Popper
+    #   src: https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js
+    #   integrity: sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q
+    #   crossorigin: anonymous
+
+    - name: Popper
+      src: https://unpkg.com/popper.js@1.12.6/dist/umd/popper.js
+      # integrity: sha384-fA23ZRQ3G/J53mElWqVJEGJzU0sTs+SvzG8fXVWP+kJQ1lwFAOkcUOysnlKJC33U
+      crossorigin: anonymous
+
+    - name: Bootstrap Material Design
+      src: https://unpkg.com/bootstrap-material-design@4.1.1/dist/js/bootstrap-material-design.js
+      # integrity: sha384-3xciOSDAlaXneEmyOo0ME/2grfpqzhhTcM4cE32Ce9+8DW/04AGoTACzQpphYGYe
+      crossorigin: anonymous
+
+    # - name: Bootstrap
+    #   src: https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js
+    #   integrity: sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl
+    #   crossorigin: anonymous
+
+    - name: Moment.js
+      src: https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.20.1/moment.min.js
+      # integrity: sha384-kOzY9L5wBXCCeXrHKAMsNCiXCP+c9gu/TfMTC+vTjH542f0KEPZdw69IG2d4khx
+      crossorigin: anonymous
