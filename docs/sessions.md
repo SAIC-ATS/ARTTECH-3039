@@ -21,17 +21,17 @@ navigation: true
 
 
 
+{% assign sessions = site.sessions | sort: 'name' %}
 
-
-
-
-{% for session in site.data.course.sessions %}
+{% for session in sessions %}
 <hr>
 <div class="container">
+  ## {{ session.name }} <small>{% for date in session.dates %}{% assign section = forloop.index | prepend: '000' | slice: -3, 3 %}({{ section }}: {{ date | date_to_string }}){% endfor %}</small>
+  -   {{ session.title }}
+
   <h2>{{ session.name }}
   <small>
   {% for date in session.dates %}
-  {{ date }}
   {% assign section = forloop.index | prepend: '000' | slice: -3, 3 %}
   <span class="section-{{ section }}">({{ section }}: {{ date | date_to_string }})</span>
   {% endfor %}

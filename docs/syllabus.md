@@ -7,18 +7,18 @@ order: 0
 
 ## Intro to Computer Vision and Machine Learning <small>ARTTECH 3039</small>
 Semester, Year
-:   {{ site.data.course.semester }}, {{ site.data.course.year }}
+:   {{ site.semester }}, {{ site.year }}
 
 Meetings
-:   {% for meeting in site.data.course.meetings %}{% assign section = forloop.index | prepend: '000' | slice: -3, 3 %}(-{{ section }}) {{ meeting }}{% if site.data.course.meetings.size > 0 %}{% unless forloop.last %},{% endunless %} {% endif %}{% endfor %}
+:   {% for meeting in site.meetings %}{% assign section = forloop.index | prepend: '000' | slice: -3, 3 %}(-{{ section }}) {{ meeting }}{% if site.meetings.size > 0 %}{% unless forloop.last %},{% endunless %} {% endif %}{% endfor %}
 
 Meeting Location
-:   {% for location in site.data.course.locations %}{% assign section = forloop.index | prepend: '000' | slice: -3, 3 %}(-{{ section }}) {{ location }}{% if site.data.course.locations.size > 0 %}{% unless forloop.last %},{% endunless %} {% endif %}{% endfor %}
+:   {% for location in site.locations %}{% assign section = forloop.index | prepend: '000' | slice: -3, 3 %}(-{{ section }}) {{ location }}{% if site.locations.size > 0 %}{% unless forloop.last %},{% endunless %} {% endif %}{% endfor %}
 
 People
-:   {% for person in site.data.course.people %}{{person.role}}: [{{ person.name }}]({{ person.url }}){% if site.data.course.people.size > 0 %}{% unless forloop.last %},{% endunless %} {% endif %}{% endfor %}
+:   {% for person in site.people %}{{person.role}}: [{{ person.name }}]({{ person.url }}){% if site.people.size > 0 %}{% unless forloop.last %},{% endunless %} {% endif %}{% endfor %}
 
-{% for site in site.data.course.sites %}
+{% for site in site.sites %}
 {{ site.name }}
 :   [{{ site.url }}]({{ site.url }}) {% if site.comment %}_{{ site.comment }}_{% endif %}
 {% endfor %}
@@ -27,14 +27,14 @@ People
 
 ## Bios
 
-{% for person in site.data.course.people %}
+{% for person in site.people %}
 {{ person.bio }}
 {% endfor %}
 
 --------------------------------------------------------------------------------
 
 ## Course Description
-{{ site.data.course.description }}
+{{ site.description }}
 
 ## Course Goals
 -   Working and applied knowledge "classical" computer vision techniques.
@@ -119,10 +119,9 @@ Students wait-listed for classes will be admitted on a space available basis det
 _(subject to change based on incoming skills and experience)_
 
 {% assign sessions = site.sessions | sort: 'name' %}
-{% for session in sessions %}
-{% assign session_data = site.data.course.sessions | where:"name",session.name | first %}
+{% for session in sessions | sort: 'name' %}
 
-### {{ session.name }} <small>{% for date in session_data.dates %}{% assign section = forloop.index | prepend: '000' | slice: -3, 3 %}({{ section }}: {{ date | date_to_string }}){% endfor %}</small>
+### {{ session.name }} <small>{% for date in session.dates %}{% assign section = forloop.index | prepend: '000' | slice: -3, 3 %}({{ section }}: {{ date | date_to_string }}){% endfor %}</small>
 -   {{ session.title }}
 
 {% endfor %}

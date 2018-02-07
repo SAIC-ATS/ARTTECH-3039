@@ -6,22 +6,18 @@ layout: default
   <h1>{{ page.title }} <small>{{ page.subtitle }}</small></h1>
 
   <h2>Assigned</h2>
-  {% assign session = site.data.sessions | where: "name", page.assigned | first %}
-  <ul>
+  {% assign session = site.sessions | where: "name", page.assigned | first %}
   {% for date in session.dates %}
   {% assign section = forloop.index | prepend: '000' | slice: -3, 3 %}
-  <li class="section-{{ section }}">{{ section }}: {{ date | date_to_string }}</li>
+  <span class="section-{{ section }}">({{ section }}: {{ date | date_to_string }})</span>
   {% endfor %}
-  </ul>
 
   <h2>Due</h2>
-  {% assign session = site.data.sessions | where: "name", page.due | first %}
-  <ul>
+  {% assign session = site.sessions | where: "name", page.due | first %}
   {% for date in session.dates %}
   {% assign section = forloop.index | prepend: '000' | slice: -3, 3 %}
-  <li class="section-{{ section }}">{{ section }}: {{ date | date_to_string }}</li>
+  <span class="section-{{ section }}">({{ section }}: {{ date | date_to_string }})</span>
   {% endfor %}
-  </ul>
 </div>
 <div>
   {{ content }}
