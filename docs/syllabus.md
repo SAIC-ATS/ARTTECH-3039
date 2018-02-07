@@ -119,7 +119,7 @@ Students wait-listed for classes will be admitted on a space available basis det
 _(subject to change based on incoming skills and experience)_
 
 {% assign sessions = site.sessions | sort: 'name' %}
-{% for session in sessions | sort: 'name' %}
+{% for session in sessions %}
 
 ### {{ session.name }} <small>{% for date in session.dates %}{% assign section = forloop.index | prepend: '000' | slice: -3, 3 %}({{ section }}: {{ date | date_to_string }}){% endfor %}</small>
 -   {{ session.title }}
