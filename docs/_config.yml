@@ -3,7 +3,7 @@
 # description: The course page for ARTTECH-3039, Intro to Computer Vision.
 # forum: https://ats.community/c/courses/arttech-3039-spring-2018
 
-baseurl: /ARTTECH-3939
+baseurl: /ARTTECH-3039
 url: https://saic-ats.github.io/ARTTECH-3039
 
 timezone: America/Chicago
