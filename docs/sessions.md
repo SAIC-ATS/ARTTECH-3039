@@ -2,7 +2,7 @@
 layout: page
 title: Sessions
 permalink: /sessions
-navigation: true
+navigation: false
 ---
 
 <!-- {% for collection in site.collections %}
