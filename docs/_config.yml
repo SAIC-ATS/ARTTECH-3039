@@ -85,7 +85,7 @@ assets:
   js:
     - name: jQuery
       src: https://code.jquery.com/jquery-3.2.1.slim.min.js
-      # integrity: sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN
+      integrity: sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN
       crossorigin: anonymous
 
     # - name: Popper
@@ -94,13 +94,13 @@ assets:
     #   crossorigin: anonymous
 
     - name: Popper
-      src: https://unpkg.com/popper.js@1.12.6/dist/umd/popper.js
-      # integrity: sha384-fA23ZRQ3G/J53mElWqVJEGJzU0sTs+SvzG8fXVWP+kJQ1lwFAOkcUOysnlKJC33U
+      src: https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.6/umd/popper.min.js
+      integrity: sha256-/GXjBGBWRx8/y1Be190w3hrUOFXNs9qPhthi0tbNnG8=
       crossorigin: anonymous
 
     - name: Bootstrap Material Design
       src: https://unpkg.com/bootstrap-material-design@4.1.1/dist/js/bootstrap-material-design.js
-      # integrity: sha384-3xciOSDAlaXneEmyOo0ME/2grfpqzhhTcM4cE32Ce9+8DW/04AGoTACzQpphYGYe
+      integrity: sha384-CauSuKpEqAFajSpkdjv3z9t8E7RlpJ1UP0lKM/+NdtSarroVKu069AlsRPKkFBz9
       crossorigin: anonymous
 
     # - name: Bootstrap
@@ -110,5 +110,10 @@ assets:
 
     - name: Moment.js
       src: https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.20.1/moment.min.js
-      # integrity: sha384-kOzY9L5wBXCCeXrHKAMsNCiXCP+c9gu/TfMTC+vTjH542f0KEPZdw69IG2d4khx
+      integrity: sha256-ABVkpwb9K9PxubvRrHMkk6wmWcIHUE9eBxNZLXYQ84k=
+      crossorigin: anonymous
+
+    - name: MathJax
+      src: https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML
+      integrity: sha384-ekJxthwrl3ID8DzHP2myRUdIPhTdEgNJ1xKhDsMKDT3+kBlZ4Zwk5zH960SnLZR8
       crossorigin: anonymous
