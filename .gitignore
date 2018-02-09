@@ -2,16 +2,29 @@ docs/html
 docs/tagfile.xml
 docs/*.tag
 
-__*/
+_*/
 
 raw/
+models/
+data/
+libs/dlib/
+
+build-example*
+
+Makefile
+config.make
 
 .compiler*
-config.make
-Makefile
 Project.xcconfig
 *.xcodeproj
 *.plist
+
+example*/Makefile
+example*/config.make
+
+*.swp
+*.bg
+*.qbs
 
 *.sln
 *.vcxproj
