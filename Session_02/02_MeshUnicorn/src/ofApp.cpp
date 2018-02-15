@@ -42,7 +42,7 @@ void ofApp::draw()
 
         mesh.addVertex(currentPoint - (normalPoint * strokeWidth));
         mesh.addColor(ofColor(255, alpha));
-
+        
         float imageWidth = image.getWidth();
         float imageHeight = image.getHeight();
 
@@ -51,10 +51,10 @@ void ofApp::draw()
         imageHeight = 1;
 #endif
 
-        float currentTextureY = ofMap(i,0,polyline.size(),0,imageHeight);
+        float currentTextureY = ofMap(i, 0, polyline.size(), 0, imageHeight);
 
-        ofVec2f textureCoordinate0 = ofVec2f(0,currentTextureY);
-        ofVec2f textureCoordinate1 = ofVec2f(imageWidth,currentTextureY);
+        glm::vec2 textureCoordinate0 = glm::vec2(0,currentTextureY);
+        glm::vec2 textureCoordinate1 = glm::vec2(imageWidth,currentTextureY);
 
         mesh.addTexCoord(textureCoordinate0);
         mesh.addTexCoord(textureCoordinate1);
