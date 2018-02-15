@@ -1,14 +1,14 @@
 #pragma once
 
+
 #include "ofMain.h"
 
-class ofApp : public ofBaseApp{
 
+class ofApp: public ofBaseApp
+{
 public:
-    void setup();
-    void draw();
+    void setup() override;
+    void draw() override;
 
     ofMesh mesh;
-
-    ofEasyCam cam;
 };
