@@ -36,7 +36,7 @@ void ofApp::setup()
             // Two Triangles Comprising a Quad
             //
             //  P0 (x + 0, y + 0)
-            //  .___________. P1 (x + 1, y + 1)
+            //  .___________. P1 (x + 1, y + 0)
             //  |          /|
             //  |         / |
             //  |  T0    /  |

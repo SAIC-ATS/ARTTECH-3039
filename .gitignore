@@ -9,8 +9,10 @@ models/
 data/
 libs/dlib/
 
-build-example*
+*_XX*
 
+build-example*
+build-*
 Makefile
 config.make
 
