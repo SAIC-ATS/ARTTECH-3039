@@ -2,7 +2,7 @@ docs/html
 docs/tagfile.xml
 docs/*.tag
 
-_*/
+__*
 
 raw/
 models/
