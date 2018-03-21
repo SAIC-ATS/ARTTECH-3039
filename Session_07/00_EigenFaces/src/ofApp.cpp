@@ -3,6 +3,80 @@
 
 void ofApp::setup()
 {
+    // Load all jpg images.
+    ofDirectory dir("images/");
+    dir.allowExt("jpg");
+    
+    // Image num channels.
+    imageNumChannels = 3;
+    
+    for (auto& file: dir)
+    {
+        ofPixels pix;
+        if (ofLoadImage(pix, file))
+        {
+            if (imageWidth == 0 && imageHeight == 0)
+            {
+                imageWidth = pix.getWidth();
+                imageHeight = pix.getHeight();
+                imageFormat = pix.getPixelFormat();
+            }
+            else if (imageWidth != pix.getWidth()
+                  || imageHeight != pix.getHeight()
+                  || pix.getNumChannels() != imageNumChannels
+                  || pix.getPixelFormat() != imageFormat)
+            {
+                ofLogError("ofApp::setup") << "The first image was: " << imageWidth << " x " << imageHeight << "x" << imageNumChannels << " but this image was " << pix.getWidth() << " x " << pix.getHeight() << "x" << pix.getNumChannels() << ": " << file.getAbsolutePath();
+                ofExit();
+            }
+            
+            // Save a copy of this image.
+            cv::Mat img;
+            ofxCv::copy(pix, img);
+            img.convertTo(img, CV_32FC3, 1.0 / 255.0);
+            images.push_back(img);
+            
+            // If we want to augment our data, we might mirror the image
+            // horizontally to create another data point like this:
+             cv::Mat imgFlip;
+             cv::flip(img, imgFlip, 1);
+             images.push_back(imgFlip);
+        }
+        else
+        {
+            ofLogError("ofApp::setup") << "Unable to load image: " << file.getAbsolutePath() << ", skipping.";
+        }
+    }
+    
+    // Double check data integrity.
+    if (images.empty())
+    {
+        ofLogError("ofApp::setup") << "No images were loaded from " << dir.getAbsolutePath() << ", quitting.";
+        ofExit();
+    }
+    else
+    {
+        ofLogNotice("ofApp::setup") << "Loaded " << images.size() << " images of size " << imageWidth << " x " << imageHeight;
+    }
+    
+    // Create one giant data matrix containing all data.
+    // The data matrix will be a 2-D matrix with
+    //
+    //      new_width == width * height * numChannels
+    //      new_height == images.size()
+    //
+    cv::Mat data(images.size(), imageWidth * imageHeight * imageNumChannels, CV_32F);
+    
+    // Turn an image into one row vector in the data matrix
+    for (std::size_t i = 0; i < images.size(); ++i)
+    {
+        // Reshape the `image` as a 1-D matrix.
+        cv::Mat reshaped = images[i].reshape(1, 1);
+        
+        // Copy the 1-D vector into the data cv::Mat.
+        reshaped.copyTo(data.row(i));
+    }
+    
     std::string dataPath = ofToDataPath("data.pca", true);
     
     if (ofFile(dataPath).exists())
@@ -11,27 +85,60 @@ void ofApp::setup()
         cv::FileStorage fs(dataPath, cv::FileStorage::READ);
         pca.read(fs.root());
     }
-    else
-    {
-        ofLogFatalError("ofApp::setup") << "Missing data.pca file.";
-        ofExit();
-    }
 
-    // Initialize weights.
-    weights = std::vector<float>(pca.eigenvectors.rows, 0.0);
+    // Did it load from disk?
+    if (pca.eigenvalues.empty())
+    {
+        ofLogNotice("ofApp::setup") << "Calculating PCA, this might take a while.";
+        pca(data,  // This is the data vector we calculated above.
+            cv::Mat(), // We don't have a pre-computed mean, so we will let the algorithm calculate it for us.
+            cv::PCA::DATA_AS_ROW, // Intrepret the data as having each sample in a row (like our data above).
+            MAX_PRINCIPAL_COMPONENTS // The maximum principal components we want to keep.
+            );
+        
+        // Save the results.
+        cv::FileStorage fs(dataPath, cv::FileStorage::WRITE);
+        pca.write(fs);
+        fs.release();
+    }
     
+    // Extract mean vector and reshape it to obtain mean image.'
+    loadTexture(pca.mean.reshape(imageNumChannels, imageHeight), meanTexture);
+
+    // Iterate through the eigen images and save each to its own image.
+    for(std::size_t i = 0; i < pca.eigenvectors.rows; i++)
+    {
+        // Load textures.
+        eigenTextures.push_back(ofTexture());
+
+        loadTexture(pca.eigenvectors.row(i).reshape(imageNumChannels, imageHeight),
+                    eigenTextures.back());
+        
+        // Add the weights.
+        weights.push_back(0);
+    }
 }
 
 
 void ofApp::update()
 {
+    if (noiseWalk)
+    {
+        noiseOffset += 0.01;
+        int i = 0;
+        for (auto& w: weights)
+            w = ofMap(ofNoise(noiseOffset + (i++)), 0, 1, MIN_WEIGHT, MAX_WEIGHT);
+        recomputeImage = true;
+    }
+    
+    
     if (recomputeImage)
     {
         // Start with a copy of the mean image.
         cv::Mat computedImage = pca.mean.reshape(imageNumChannels, imageHeight).clone();
 
         // Add the eigen vectors with the weights
-        for (std::size_t i = 0; i < /*pca.eigenvectors.rows*/12; i++)
+        for (std::size_t i = 0; i < pca.eigenvectors.rows; i++)
         {
             computedImage += (pca.eigenvectors.row(i).reshape(imageNumChannels, imageHeight) * weights[i]);
         }
@@ -101,6 +208,20 @@ void ofApp::draw()
             x = xOffset;
         }
         else x += width;
+    }
+}
+
+
+void ofApp::keyPressed(int key)
+{
+    if (key == 'r')
+    {
+        for (auto& w: weights) w = 0;
+        recomputeImage = true;
+    }
+    else if (key == 'n')
+    {
+        noiseWalk = !noiseWalk;
     }
 }
 
