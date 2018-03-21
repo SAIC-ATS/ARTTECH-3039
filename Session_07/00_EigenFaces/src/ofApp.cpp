@@ -130,8 +130,8 @@ void ofApp::update()
             w = ofMap(ofNoise(noiseOffset + (i++)), 0, 1, MIN_WEIGHT, MAX_WEIGHT);
         recomputeImage = true;
     }
-    
-    
+
+
     if (recomputeImage)
     {
         // Start with a copy of the mean image.
