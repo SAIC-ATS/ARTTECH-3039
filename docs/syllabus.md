@@ -48,7 +48,7 @@ People
     -   [Cult of Done](http://www.brepettis.com/blog/2009/3/3/the-cult-of-done-manifesto.html)
 
 ## Methodology
-Students will engage in individual in-lab and home assignments, class presentations, lectures, discussions, assigned readings, group and individual projects and desk critiques. Visiting artists / faculty may enhance the experience and offer additional perspectives.
+Students will engage in individual in-lab and (some) home assignments, class presentations, lectures, discussions, assigned readings, group and individual projects and desk critiques. Visiting artists / faculty may enhance the experience and offer additional perspectives.
 
 ## Class Structure (Typical)
 -   9:00 -  9:30 : Look at new artists, catch up on the week's CV/ML headlines.
@@ -58,10 +58,10 @@ Students will engage in individual in-lab and home assignments, class presentati
 -   12:00 - 01:00 : Lunch
 -   01:00 - 02:30 : Hands-on Workshop.
 -   02:30 - 02:45 : Break
--   02:45 - 04:00 : Open Studio (Homework, Projects, Discussion, etc).
+-   02:45 - 04:30 : Open Studio (Homework, Projects, Discussion, etc).
 
 ## Assignments
-The first 66% of the course will be built on well-constrained code-based assignments. These assignments have clear goals and are intended to build confidence and code competency. The last 34% of the course is focused on integrating these techniques, technologies and critical discussions with your existing creative / research practice. The final project will be part of an exhibition.
+The first 66% of the course will be built on well-constrained code-based assignments. These assignments have clear goals and are intended to build confidence and code competency. The last 34% of the course is focused on integrating these techniques, technologies and critical discussions with your existing creative / research practice.
 
 ## Creative Coding Tools
 We will be doing most of our work in C++ with openFrameworks. Most modern computer vision and machine learning tools are built with C++ at their core. That said, many online examples use Python to interact with the same code. We will primarily focus on well-documented libraries that well-documented and easily compatible with openFrameworks (e.g. [OpenCV](https://opencv.org/) and [dlib](http://dlib.net/)).
@@ -111,9 +111,6 @@ Students wait-listed for classes will be admitted on a space available basis det
 ## Study Sessions
 -   Students are encouraged to form a study group to meet and work on the homework.
 -   The TA will be available during TA office hours (TBA).
-
-## Class Exhibition
--   The course will culminate in a class exhibition with an opening during the second-to-last week of class.
 
 ## Course Schedule
 _(subject to change based on incoming skills and experience)_
