@@ -3,7 +3,7 @@ layout: page
 title: Prerequisites
 permalink: /prerequisites/
 order: 100
-published: false
+published: true
 ---
 
 ## Prerequisites
