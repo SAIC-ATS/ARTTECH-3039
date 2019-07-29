@@ -23,3 +23,4 @@ order: 100
 7. Install QTCreator scripts
    - `cd openFrameworks/scripts/qtcreator/`
    - `./install_template.sh`
+8. Install [RunwayML](https://runwayml.com/) and sign up for account.
