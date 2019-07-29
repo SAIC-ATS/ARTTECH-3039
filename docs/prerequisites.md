@@ -11,6 +11,7 @@ published: false
 Knowledge of basic coding tools is required for this course. This includes the following:
 
 ### Familiarity with the Command Line
+
 - Navigate the file system using
   - `cd` Change directory using
     - `cd ../../../my_folder` relative paths names
@@ -36,6 +37,7 @@ Knowledge of basic coding tools is required for this course. This includes the f
   - [Learn Enough](https://www.learnenough.com/command-line-tutorial)
 
 ### Familiarity with Git / Github
+
 - Track work using `git` from the command line, or a GUI.
   - `git add your_file.txt` Stage a file to commit
   - `git commit -m "Your commit message."` Commit all changes with a message.
@@ -58,6 +60,7 @@ Knowledge of basic coding tools is required for this course. This includes the f
   - [Git Essential Training](https://www.lynda.com/Git-tutorials/Git-Essential-Training/100222-2.html)
 
 ### Markdown
+
 - Write documents using markdown syntax.
 
 - Resources:
@@ -66,6 +69,7 @@ Knowledge of basic coding tools is required for this course. This includes the f
   - [Markdown Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
 
 ### Familiarity with Basic Code Concepts
+
 - What is code?
 - What is an application?
 - What is a variable?
@@ -89,6 +93,7 @@ Knowledge of basic coding tools is required for this course. This includes the f
   - [Up and Running with C++](https://www.lynda.com/C-tutorials/Up-Running-C/167922-2.html)
 
 ### Data Representation
+
 - How is binary data saved on a computer?
 - How are decimal (base 10) numbers represented in binary?
 - How is text represented with numbers?
@@ -103,10 +108,12 @@ Knowledge of basic coding tools is required for this course. This includes the f
 ### Familiarity with openFrameworks and C++
 
 #### Compiling
+
 - How do you generate a project files with the Project Generator?
 - How do you compile a program with an IDE like Xcode?
 
 #### Program Structure
+
 - What are the parts of a typical openFrameworks application?
   - What is the `setup()` function and how is it used?
   - What is the `update()` function and how is it used?
@@ -118,6 +125,7 @@ Knowledge of basic coding tools is required for this course. This includes the f
   - [ofBook: Animation](http://openframeworks.cc/ofBook/chapters/animation.html)
 
 #### Objects
+
 - What is an `ofPixels` object for?
 - What is an `ofTexture` object for?
 - What is an `ofImage` object for?
@@ -131,6 +139,7 @@ Knowledge of basic coding tools is required for this course. This includes the f
   - [openFrameworks Learning](http://openframeworks.cc/learning/)
 
 ### C/C++
+
 - What is a _pointer_ and why might it be used?
 - What is a _reference_ and why might it be used?
 - What are _smart_ pointers and why might they be used?

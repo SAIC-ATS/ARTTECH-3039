@@ -7,7 +7,6 @@ navigation: false
 
 <!-- {% for collection in site.collections %}
 
-
 <ul>
 {% if collection.name and collection.docs.size != 0 %}
 {% for doc in collection.docs %}
@@ -18,8 +17,6 @@ navigation: false
 {% endif %}
 </ul>
 {% endfor %} -->
-
-
 
 {% assign sessions = site.sessions | sort: 'name' %}
 

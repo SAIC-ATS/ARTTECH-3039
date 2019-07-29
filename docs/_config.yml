@@ -14,14 +14,16 @@ description: >
   automated mass surveillance to interactive installations. A final project will
   build on in-class workshops, technical exercises, critical readings and
   discussions.
-forum: https://ats.community/c/courses/arttech-3039-spring-2018
-semester: Spring
-year: 2018
+forum: https://saic.instructure.com/courses/2535662/discussion_topics
+semester: Summer
+year: 2019
 meetings:
-  - Wednesday 9am-4pm
+  - Daily 9am-4:30pm
 locations:
   - MacLean 401
 sites:
+  - name: Canvas
+    url: https://saic.instructure.com/courses/2535662
   - name: General Code Discussion (Public)
     url: https://ats.community/
     comments: Post your questions in the appropriate category.
@@ -39,28 +41,18 @@ people:
     role: Instructor
     gravatar: 8f6ac7bc0f5c26b87269d442d5339206
     email: info@christopherbaker.net
-    web: https://christopherbaker.net
+    web: https://new.christopherbaker.net
     twitter: bakercp
     github: bakercp
     bio: >
-      [Christopher Baker](http://christopherbaker.net) is an artist whose work
+      [Christopher Baker](https://new.christopherbaker.net) is an artist whose work
       engages the rich collection of social, technological and ideological networks
       present in the urban landscape. He creates artifacts and situations that
       reveal and generate relationships within and between these networks.
       Christopher’s work has been presented worldwide and he contributes to the open
       source community at [http://github.com/bakercp](http://github.com/bakercp).
 
-  - name: Doug Rosman
-    role: TA
-    web: https://http://dougrosman.com/
-    github: dougrosman
-    bio: >
-      Doug Rosman was born in Santa Monica, California, and spent the better part of his life in Southern California. He received his BA in Interdisciplinary Computing and the Arts at the University of California, San Diego in 2014. He is currently pursuing an MFA in Art and Technology Studies at the School of the Art Institute of Chicago. He is getting used to the Midwest.
-
-
-############################
-
-
+#### JEKYLL ####
 
 baseurl: /ARTTECH-3039
 url: https://saic-ats.github.io/ARTTECH-3039

@@ -7,6 +7,7 @@ published: true
 Knowledge of basic coding tools is required for this course. This includes the following:
 
 ### Familiarity with the Command Line
+
 - Navigate the file system using
   - `cd` Change directory using
     - `cd ../../../my_folder` relative paths names
