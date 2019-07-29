@@ -31,6 +31,10 @@ Knowledge of basic coding tools is required for this course. This includes the f
   - Creating and managing SSH keys.
   - Logging on to a remote machine via SSH.
 
+- Find out more about command line programs by using `man`.
+  - e.g. `man ls` is used to discover options for the `ls` program.
+  - To exit the `man` program typq `q`.
+
 - Resources:
   - [Learn the Linux Command Line: The Basics](https://www.lynda.com/Linux-tutorials/Learn-Linux-Command-Line-Basics/435539-2.html)
   - [Learn the Command Line](https://www.codecademy.com/learn/learn-the-command-line)
