@@ -9,7 +9,9 @@ navigation: false
 {% assign sessions = site.sessions | sort: 'name' %}
 {% for session in sessions %}
 {% if session.draft %}{% continue %}{% endif %}
-<hr>
+
+---
+
 <div class="container">
   <h2>{{ session.name }}
   <small>
@@ -22,9 +24,10 @@ navigation: false
 
   <h3><em>{{ session.title }}</em></h3>
 
-  <h4>Class</h4>
-  <a href="{{ site.baseurl }}{{ session.url }}">Outline</a>
-  <a href="{{ site.repo_url }}/tree/master/{{ session.name | replace: ' ', '_'}}">Code</a>
+#### Class
+
+- [Outline]({{ site.baseurl }}{{ session.url }})
+- [Code]({{ site.repo_url }}/tree/master/{{ session.name | replace: ' ', '_'}})
 
   {% assign assignments = site.assignments | where: "assigned", session.name %}
   {% if assignments.size != 0 %}
