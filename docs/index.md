@@ -37,7 +37,7 @@ navigation: false
   {% for assignment in assignments %}
     <li><a href="{{ site.baseurl }}{{ assignment.url }}">{{ assignment.title }}</a></li>
   {% endfor %}
-  </li>
+  </ul>
   {% endif %}
 
   {% assign assignments = site.assignments | where: "due", session.name %}
