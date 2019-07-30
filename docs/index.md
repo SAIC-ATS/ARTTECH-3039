@@ -22,6 +22,10 @@ navigation: false
 
   <h3><em>{{ session.title }}</em></h3>
 
+  <h4>Class</h4>
+  <a href="{{ site.baseurl }}{{ session.url }}">Outline</a>
+  <a href="{{ site.repo_url }}/tree/master/{{ session.name }}">Code</a>
+
   {% assign assignments = site.assignments | where: "assigned", session.name %}
   {% if assignments.size != 0 %}
   <h4>Assignments</h4>
@@ -45,5 +49,15 @@ navigation: false
   <a href="{{ site.baseurl }}{{ note.url }}">{{ note.title }}</a>
   {% endfor %}
   {% endif %}
+
+  {% assign notes = site.notes | where: "session", session.name %}
+  {% if notes.size != 0 %}
+  <h4>Notes</h4>
+  {% for note in notes %}
+  <a href="{{ site.baseurl }}{{ note.url }}">{{ note.title }}</a>
+  {% endfor %}
+  {% endif %}
+
+
 </div>
 {% endfor %}
