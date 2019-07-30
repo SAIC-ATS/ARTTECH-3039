@@ -24,7 +24,7 @@ navigation: false
 
   <h4>Class</h4>
   <a href="{{ site.baseurl }}{{ session.url }}">Outline</a>
-  <a href="{{ site.repo_url }}/tree/master/{{ session.name }}">Code</a>
+  <a href="{{ site.repo_url }}/tree/master/{{ session.name | replace: ' ', '_'}}">Code</a>
 
   {% assign assignments = site.assignments | where: "assigned", session.name %}
   {% if assignments.size != 0 %}
