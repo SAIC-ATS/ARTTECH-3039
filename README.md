@@ -3,7 +3,7 @@ ARTTECH-3039
 
 _Introduction to Computer Vision and Machine Learning_
 
-Course Website: [https://saic-ats.Github.io/ARTTECH-3039/](https://saic-ats.Github.io/ARTTECH-3039/)
+Course Website: [https://saic-ats.Github.io/ARTTECH-3039/](https://saic-ats.github.io/ARTTECH-3039/)
 
 Installation
 ------------
@@ -14,7 +14,7 @@ This repository should be placed in your openFrameworks root directory. Your ope
 openFrameworks/
 ├── ARTTECH-3039
 │   ├── README.md
-│   ├── Week_00
+│   ├── Session_00
 │   ├── docs
 │   └── ...
 ├── CHANGELOG.md
