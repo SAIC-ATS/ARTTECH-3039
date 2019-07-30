@@ -47,7 +47,7 @@ navigation: false
   {% for assignment in assignments %}
     <li><a href="{{ site.baseurl }}{{ assignment.url }}">{{ assignment.title }}</a></li>
   {% endfor %}
-  <ul>
+  </ul>
   {% endif %}
 
   {% assign notes = site.notes | where: "session", session.name %}
