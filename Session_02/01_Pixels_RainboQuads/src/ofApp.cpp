@@ -10,8 +10,11 @@ void ofApp::setup()
 
 void ofApp::draw()
 {
+    width = ofGetWidth();
+    height = ofGetHeight();
+    
     ofPixels myPixels;
-    myPixels.allocate(400, 400, OF_PIXELS_RGB);
+    myPixels.allocate(width, height, OF_PIXELS_RGB);
 
     for (std::size_t x = 0; x < myPixels.getWidth(); ++x)
     {

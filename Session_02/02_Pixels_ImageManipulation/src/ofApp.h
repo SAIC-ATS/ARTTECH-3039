@@ -8,9 +8,12 @@ class ofApp: public ofBaseApp
 {
 public:
     void setup() override;
+    void update() override;
     void draw() override;
-    
-    float width = 0;
-    float height = 0;
+
+    void keyPressed(int key) override;
+
+    ofPixels myPixels;
+    ofTexture myTexture;
     
 };

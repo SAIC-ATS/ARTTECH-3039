@@ -14,13 +14,13 @@ void ofApp::draw()
     myPixels.allocate(ofGetWidth(), ofGetHeight(), OF_PIXELS_RGB);
 
     std::vector<ofColor> colors = {
-        ofColor::red,
-        ofColor::orange,
-        ofColor::yellow,
-        ofColor::green,
-        ofColor::blue,
-        ofColor::indigo,
-        ofColor::violet
+        ofColor::red, // colors[0]
+        ofColor::orange, // colors[1]
+        ofColor::yellow, // colors[2]
+        ofColor::green, // colors[3]
+        ofColor::blue, // colors[4]
+        ofColor::indigo, // colors[5]
+        ofColor::violet // colors[6]
     };
 
     for (std::size_t x = 0; x < myPixels.getWidth(); ++x)
