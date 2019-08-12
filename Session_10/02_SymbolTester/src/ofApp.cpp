@@ -177,7 +177,7 @@ void ofApp::keyPressed(int key)
 void ofApp::loadData()
 {
     // Load trained network data.
-    dlib::deserialize(ofToDataPath("mnist_network_tagged.dat", true)) >> net;
+    dlib::deserialize(ofToDataPath("mnist_network.dat", true)) >> net;
     
     // MNIST is broken into two parts, a training set of 60000 images and a test set of
     // 10000 images.  Each image is labeled so that we know what hand written digit is
