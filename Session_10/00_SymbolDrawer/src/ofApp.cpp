@@ -149,7 +149,7 @@ void ofApp::keyPressed(int key)
     {
         for (auto& entry: queuedForSave)
         {
-            entry.second.save("samples/" + ofGetTimestampString() + "-" + ofToString(entry.first) + ".jpg");
+            entry.second.save("samples/" + ofGetTimestampString() + "-" + ofToString(entry.first) + ".png");
         }
         
         queuedForSave.clear();
