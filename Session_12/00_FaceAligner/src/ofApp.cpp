@@ -39,17 +39,21 @@ void ofApp::setup()
     }
 
     ofxDlib::FaceDetector::Settings detectorSettings;
-    ofxDlib::FaceDetector detector;
     detector.setup(detectorSettings);
 
     ofxDlib::FaceShapePredictor::Settings shapePredictorSettings;
-    ofxDlib::FaceShapePredictor shapePredictor;
     shapePredictor.setup(shapePredictorSettings);
+
+    ofxDlib::FaceCoder::Settings coderSettings;
+    coder.setup(coderSettings);
 
     for (const auto& entry: pixelMap)
     {
         // std::string dirName = entry.first;
         // std::vector<ofPixels> images = entry.second;
+
+        std::vector<ofTexture> alignedTextures;
+        std::vector<std::vector<float>> faceCodes;
 
         for (auto& pixels: entry.second)
         {
@@ -59,13 +63,22 @@ void ofApp::setup()
             for (auto detection: detections)
             {
                 auto faceShape = shapePredictor.predict(pixels, detection.rectangle);
-
                 ofPixels alignedFace = faceShape.alignedFace();
+                ofTexture alignedTexture;
+                alignedTexture.loadData(alignedFace);
+                alignedTextures.push_back(alignedTexture);
 
-                std::string filename = "AlignedFaces/" + ofGetTimestampString() + ".jpg";
-                ofSaveImage(alignedFace, filename);
+                // Generate the face code.
+                std::vector<float> faceCode = coder.code(alignedFace);
+                faceCodes.push_back(faceCode);
+
+                //std::string filename = "AlignedFaces/" + ofGetTimestampString() + ".jpg";
+                //ofSaveImage(alignedFace, filename);
             }
         }
+
+        faceChipsMap[entry.first] = alignedTextures;
+        faceCodeMap[entry.first] = faceCodes;
     }
 }
 
@@ -78,5 +91,71 @@ void ofApp::update()
 
 void ofApp::draw()
 {
+    // Draw all faces on the screen by interating throug the face chips map.
+    int x = 0;
+    int y = 0;
 
+    for (auto& texture: faceChipsMap[matchingClass])
+    {
+        // Draw the texture.
+        texture.draw(x, y);
+
+        // Increment the x position.
+        x += texture.getWidth();
+
+        // If we go off the right side, increment the y-position and reset
+        // the x position.
+        if (x + texture.getWidth() > ofGetWidth())
+        {
+            y += texture.getHeight();
+            x = 0;
+        }
+    }
+}
+
+
+void ofApp::dragEvent(ofDragInfo dragInfo)
+{
+    matchingClass = "I don't know.";
+
+    // Big assumption that someone dragged 1 image file only.
+    std::string imageFilename = dragInfo.files[0];
+
+    ofPixels pixels;
+    ofLoadImage(pixels, imageFilename);
+
+    // Get the list of bounding boxes and confidences from the face detector.
+    auto detections = detector.detect(pixels);
+
+    for (auto detection: detections)
+    {
+        auto faceShape = shapePredictor.predict(pixels, detection.rectangle);
+        ofPixels alignedFace = faceShape.alignedFace();
+
+        // Generate the face code.
+        std::vector<float> faceCode = coder.code(alignedFace);
+
+        // Comapre this face code to each face code in our database.
+        for (auto& entry: faceCodeMap)
+        {
+            for (auto& knownFaceCode: entry.second)
+            {
+                float sum = 0;
+                for (std::size_t i = 0; i < faceCode.size(); ++i)
+                {
+                    float diff = faceCode[i] - knownFaceCode[i];
+                    float sqrDiff = diff * diff;
+                    sum += sqrDiff;
+                }
+
+                // The euclidian distance between our vectors.
+                float distance = std::sqrt(sum);
+
+                if (distance < 0.5)
+                {
+                    matchingClass = entry.first;
+                }
+            }
+        }
+    }
 }
